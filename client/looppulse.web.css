@@ -34,13 +34,17 @@ body {
   color: #eee;
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
+  .outer {
+    margin-left: 20px;
+  }
   .inner {
     width: 100%;
   }
 
   .tagline {
     padding-top: 20px;
+    font-size: 35px;
     float: left;
   }
 }
