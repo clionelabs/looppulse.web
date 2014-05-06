@@ -5,6 +5,8 @@ body {
   color: #eee;
 }
 
+/*http://stackoverflow.com/questions/396145/whats-the-best-way-of-centering-a-div-vertically-with-css/6182661#6182661*/
+
 .outer {
   display: table;
   position: absolute;
