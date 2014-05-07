@@ -1,0 +1,145 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+// All About color
+$link-text: #028080;
+$button-bg: #33cccc;
+$button-hover-bg: #028080;
+$button-text: #f1f8f8;
+
+$tint-color: #39c5d0;
+$primary-color: #fff;
+$alt-color: #3CC;
+$header-color: #f1f9f8;
+$footer-color: #7d7d7d;
+
+$text-color: #666;
+$alt-text-color: #fff; //for dark bg
+$em-text-color: #007f7f;
+
+$link-hover: #33cccc;
+$link-normal: #007f7f;
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+//bootstrap override
+
+.btn-primary {
+  color: white;
+  background-color: $button-bg;
+  border: none;
+
+  &:hover, &:focus, &:active, &.active, .open > &.dropdown-toggle {
+    color: $button-text;
+    background-color: $button-hover-bg;
+    border: none;
+  }
+}
+//override
+body {
+    color: $text-color;
+
+}
+a {
+    color: $link-normal;
+    &:hover {
+        color: $link-hover;
+    }
+}
+
+//Typographic
+body {
+    //font-family: "HelveticaNeueLTStd-Cn", "Helvetica Neue LT Std Condensed", "Open Sans Condensed", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", sans-serif ;
+    font-family: "Open Sans Condensed", sans-serif;
+    line-height: 1.2;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+}
+
+.headline {
+    font-family: "Open Sans Condensed", sans-serif;
+    .upper { 
+        letter-spacing: 0.05em
+    }
+    .lower{
+        letter-spacing: -0.025em
+    }
+}
+h2, h3 {
+    font-size: 50px;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+//Sections
+header {
+    border-bottom: 13px solid $tint-color;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    background-color: $header-color;
+    .site-name {
+        display: inline-block;
+        background-image:url('../images/logo.png');
+        @extend .text-hide;
+        width: 278px;
+        height: 85px;
+        margin: 7px 0 7px 60px;
+    }
+    .nav {
+        margin-top: 38px;
+        margin-right: 48px;
+
+        & > li > a:hover, & > li > a:focus {
+            background-color: $button-hover-bg;
+        }
+    }
+
+    .nav-pills > li.active > a, 
+    .nav-pills > li.active > a:hover, 
+    .nav-pills > li.active > a:focus {
+      color: $link-normal;
+      background-color: transparent;
+    }
+}
+section {
+   background-color:  $primary-color;
+   color: $text-color;
+   padding: 50px 72px;
+
+    &.alt {
+        background-color: $alt-color;
+        color: $alt-text-color;
+    }
+    &#landing {
+        background-color: #b5e6e6;
+        color: $alt-text-color;
+    }
+    &#get-in-touch {
+        color: $em-text-color;
+        font-size: 40px;
+        letter-spacing: 0.03em;
+    }
+}
+footer {
+    background-color: $footer-color;
+    color: $alt-text-color;
+    padding: 50px 72px;
+    .copyright {
+        text-align: center;
+    }
+
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+}
