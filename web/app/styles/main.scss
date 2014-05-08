@@ -43,6 +43,10 @@ $link-normal: #007f7f;
     border: none;
   }
 }
+
+body > .container {
+    padding: 0;
+}
 //override
 body {
     color: $text-color;
@@ -80,6 +84,24 @@ h2, h3 {
     font-weight: 700;
 }
 
+//Common
+.photo, .icon-badge, .art {
+    max-width: 100%;
+}
+
+.call-for-action {
+    color: $em-text-color;
+    font-size: 40px;
+    letter-spacing: 0.03em;
+}
+
+
+.get-in-touch {
+    font-size: 0.6em;
+    padding: 0.4em 1.1em;
+    margin-left: 0.6em
+}
+
 //Sections
 header {
     border-bottom: 13px solid $tint-color;
@@ -98,9 +120,12 @@ header {
     .nav {
         margin-top: 38px;
         margin-right: 48px;
-
+        font-size: 1.4em;
         & > li > a:hover, & > li > a:focus {
             background-color: $button-hover-bg;
+        }
+        .get-in-touch {
+            font-size: 80%;
         }
     }
 
@@ -112,24 +137,87 @@ header {
     }
 }
 section {
-   background-color:  $primary-color;
-   color: $text-color;
-   padding: 50px 72px;
-
+    background-color:  $primary-color;
+    color: $text-color;
+    padding: 50px 88px;
     &.alt {
         background-color: $alt-color;
         color: $alt-text-color;
     }
-    &#landing {
-        background-color: #b5e6e6;
-        color: $alt-text-color;
+}
+
+//Section common
+.concept-article h2 {
+    margin-top: 80px;
+}
+
+//Specific Section
+#landing {
+    background: #b5e6e6 url(../images/landing_bg.png) center no-repeat;
+    color: $alt-text-color;
+
+}
+#slogan {
+    text-align: center;
+}
+#analyze {
+    padding-bottom: 0;
+}
+#analyze-dashboard {
+    background: url(../images/dashboard_bg.png) bottom center no-repeat;
+    min-height: 465px;
+    padding: { 
+        top: 0;
+        bottom: 0;
     }
-    &#get-in-touch {
+    h3 {
         color: $em-text-color;
-        font-size: 40px;
-        letter-spacing: 0.03em;
+        margin-bottom: 0.4em;
+        margin-top: 120px; 
+    }
+    .concept-art .art {
+        margin-top:-40px;
     }
 }
+#engage {
+    .concept-art {
+        position:relative;
+        height: 445px;
+
+        &.engage-art {
+            width: 39%
+        }
+        &.plane-art {
+            width: 22%;
+            padding: 0;
+        }
+        &.laptop-art {
+            width: 39%
+        }
+
+
+        .art {
+            position:absolute;
+            max-height: 100%;
+            &[alt="engage"] { 
+                top:0;
+                left: -40px; 
+
+            }
+            &[alt="laptop"] { 
+                right: 0px; 
+                bottom:0;
+            }
+            &[alt="plane"] {
+                bottom: 115px;
+                right:0;
+            }
+        }
+
+    }
+
+}
+
 footer {
     background-color: $footer-color;
     color: $alt-text-color;
@@ -142,4 +230,52 @@ footer {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
 
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) { 
+    .container {
+        width: 100%;
+    }
+    .concept-article h2 {
+        margin-top: 20px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 1024px) { 
+    .container {
+      width: 1024px;
+    }
+    .concept-article h2 {
+        margin-top: 40px;
+    }
+    section {
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+    .call-for-action {
+        font-size: 38px;
+        white-space: nowrap;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1280px) { 
+    .container {
+      width: 1280px;
+    }
+    .concept-article h2 {
+        margin-top: 80px;
+    }
+    section {
+        padding-left: 88px;
+        padding-right: 88px;
+    }
+    .call-for-action {
+        font-size: 40px;
+    }
 }
