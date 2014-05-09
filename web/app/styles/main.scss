@@ -367,9 +367,7 @@ footer {
     #engage {
         .concept-art {
             &.plane-art {
-                -ms-transform: translate(-70px, -60px) rotate(-45deg);
-                -webkit-transform:  translate(-70px, -60px) rotate(-45deg);
-                transform: translate(-70px, -60px) rotate(-45deg);
+                transform: translate(-15%, -60px) rotate(-45deg);
             }
         }
     }
@@ -436,8 +434,7 @@ footer {
                 float: right;
             }
             &.plane-art {
-                -webkit-transform:  translate(15%, -60px) rotate(-30deg);
-                transform:  translate(15%, -60px) rotate(-30deg);
+                transform: translate(15%, -60px) rotate(-30deg);
                 float: left;
             }
             &.laptop-art {
