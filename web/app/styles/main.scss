@@ -23,6 +23,8 @@ $em-text-color: #007f7f;
 $link-hover: #33cccc;
 $link-normal: #007f7f;
 
+$base-font-size: 20px;
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -30,23 +32,29 @@ $link-normal: #007f7f;
     padding: 0.2em 0;
 }
 
-//bootstrap override
-
-.btn-primary {
-  color: white;
-  background-color: $button-bg;
-  border: none;
-
-  &:hover, &:focus, &:active, &.active, .open > &.dropdown-toggle {
-    color: $button-text;
-    background-color: $button-hover-bg;
-    border: none;
-  }
+//mixins are in.
+/* This parent can be any width and height */
+.block {
+  text-align: center;
+}
+ 
+/* The ghost, nudged to maintain perfect centering */
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
 }
 
-body > .container {
-    padding: 0;
+/* The element to be centered, can
+   also be of any width and height */ 
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 300px;
 }
+
 //override
 body {
     color: $text-color;
@@ -65,7 +73,8 @@ body {
     font-family: "Open Sans Condensed", sans-serif;
     line-height: 1.2;
     font-size: 20px;
-    letter-spacing: 0.06em;
+    letter-spacing: normal; //0.06em ;
+    letter-spacing: 0.05em;
 }
 
 .headline {
@@ -77,11 +86,51 @@ body {
         letter-spacing: -0.025em
     }
 }
-h2, h3 {
-    font-size: 50px;
-    letter-spacing: 0.1em;
-    line-height: 1.2;
-    font-weight: 700;
+h2 {
+    font-size: 1.6em;
+}
+h3 {
+    font-size: 1.4em;
+}
+h4 {
+    font-size: 1.2em;
+}
+section {
+    h2, h3 {
+        font-size: 50px;
+        letter-spacing: 0.1em;
+        line-height: 1.2;
+        font-weight: 700;
+    }
+}
+
+
+//bootstrap override
+
+.btn-primary {
+  color: white;
+  background-color: $button-bg;
+  border: none;
+
+  &:hover, &:focus, &:active, &.active, .open > &.dropdown-toggle {
+    color: $button-text;
+    background-color: $button-hover-bg;
+    border: none;
+  }
+}
+.form-control {
+    font-size: $base-font-size;
+    height: auto;
+    box-sizing: border-box;
+    border-radius:0;
+    border: none;
+}
+.btn {
+    font-size: $base-font-size;
+}
+
+body > .container {
+    padding: 0;
 }
 
 //Common
@@ -95,12 +144,19 @@ h2, h3 {
     letter-spacing: 0.03em;
 }
 
-
 .get-in-touch {
     font-size: 0.6em;
     padding: 0.4em 1.1em;
     margin-left: 0.6em
 }
+
+.sign-up {
+    text-transform: uppercase;
+    margin-left: 0.5em;
+    padding: 0.3em 1em;
+}
+
+
 
 //Sections
 header {
@@ -115,26 +171,34 @@ header {
         @extend .text-hide;
         width: 278px;
         height: 85px;
-        margin: 7px 0 7px 60px;
+        margin: 7px 0 7px 50px;
     }
+}
+#site-nav {
+    border-radius: 0;
+    margin-bottom: 0;
     .nav {
-        margin-top: 38px;
-        margin-right: 48px;
-        font-size: 1.4em;
-        & > li > a:hover, & > li > a:focus {
-            background-color: $button-hover-bg;
+        font-size: 1em;
+        margin-top: 1.4em;
+        margin-right: 1em;
+        & > li > a {   
+          color: $link-normal;
+          &:hover, &:active, &:focus {
+            color: $link-hover;
+          }
+
+        }
+        & > li.active > a {
+            &, &:hover, &:active, &:focus {
+                background-color: transparent;
+            }
         }
         .get-in-touch {
-            font-size: 80%;
+            @extend .btn-primary;
+            font-size: 1em;
         }
     }
 
-    .nav-pills > li.active > a, 
-    .nav-pills > li.active > a:hover, 
-    .nav-pills > li.active > a:focus {
-      color: $link-normal;
-      background-color: transparent;
-    }
 }
 section {
     background-color:  $primary-color;
@@ -152,13 +216,51 @@ section {
 }
 
 //Specific Section
+$flow-max-width: 485px;
 #landing {
-    background: #b5e6e6 url(../images/landing_bg.png) center no-repeat;
+    background: #b5e6e6 url(../images/landing_bg.png) top left no-repeat;
     color: $alt-text-color;
-
-}
-#slogan {
-    text-align: center;
+    padding: { top: 70px; bottom: 70px;}
+    #slogan {
+        text-align: center;
+        h2 { font-size: 2.6em; }
+        .tagline { font-size: 1.3em; }
+    }
+    #concepts {
+        position:relative;
+        padding:0;
+        font-size: 1.4em;
+        margin-bottom: 75px;
+        margin-left: -50px;
+    }
+    .concept-list {
+        list-style:none;
+        padding: 0;
+        li {
+            position: absolute;
+            width: 100%;
+            max-width: $flow-max-width;
+        }
+        .collect {
+            top: 0;
+            text-align: center;
+        }
+        .engage {
+            bottom: 0em;
+            left: 3em;
+            text-align: left;
+        }
+        .analyze {
+            bottom: 0em;
+            left: 0;
+            margin-left: -2.8em;
+            text-align: right;
+        }
+    }
+    .art {
+        margin-top: 0.9em;
+        margin-bottom: -1.4em;
+    }
 }
 #analyze {
     padding-bottom: 0;
@@ -195,7 +297,6 @@ section {
             width: 39%
         }
 
-
         .art {
             position:absolute;
             max-height: 100%;
@@ -222,11 +323,42 @@ footer {
     background-color: $footer-color;
     color: $alt-text-color;
     padding: 50px 72px;
+    a {
+        color: $alt-text-color;
+    }
     .copyright {
         text-align: center;
     }
+    .nav {
+        font-size: 1.2em;
+    }
+    // Common Footer item
+    h4 {
+        margin-bottom:1.2em;
+    }
 
+    // Email form
+    .form-control[type="email"] {
+        width: 16em;
+    }
+
+    // Social Media Etc
+    .social-network-list {
+        ul {
+            list-style: none;
+        }
+        li {
+            display: inline;
+            padding: 0;
+            &:first-child {
+                margin-right: 40px;
+                margin-left: -20px;
+            }
+        }
+    }
 }
+
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
 
@@ -277,5 +409,29 @@ footer {
     }
     .call-for-action {
         font-size: 40px;
+    }
+    #slogan {
+        h2 {
+            margin-top: 140px;
+        }
+    }
+
+    #slogan {
+        width: 55%;
+    }
+    #concepts{
+        width: 45%;
+    }
+
+    footer {
+        nav.site-nav {
+            margin-left: 20px
+        }
+        form.subscription-form {
+            margin-left: 60px
+        }
+        .connect-us {
+             margin-left: 60px
+        }
     }
 }

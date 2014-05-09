@@ -27,30 +27,50 @@
     <![endif]-->
 
     <div class="container">
+
       <header>
-        <h1 class="text-muted site-name">Loop Pulse</h1>
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a class="btn btn-primary get-in-touch">Get In Touch</a></li>
-        </ul>
+        <nav class="navbar navbar-default" role="navigation" id="site-nav">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <h1 class="site-name"><a class="navbar-brand text-hide" href="#">Loop Pulse</a></h1>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+              <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="#" class="link">Home</a></li>
+                  <li><a href="#" class="link">About Us</a></li>
+                  <li><a class="btn btn-primary get-in-touch">Get In Touch</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
       </header>
 
       <main>
         <section class="landing" id="landing">
           <div class="row">
-            <div id="concepts"  class="col-md-5">
+            <div id="concepts"  class="col-md-6">
               <ul class="concept-list">
                 <li class="concept collect">Collect</li>
                 <li class="concept analyze">Analyze</li>
                 <li class="concept engage">Engage</li>
               </ul>
+              <img src="images/landing_flow2.png" class="art">
             </div>
-            <div id="slogan" class="col-md-7">
-              <h2 class="headline"><span class="upper">RE-ENGAGE AND CONVERT</span><br> <span class="lower">YOUR MISSED OPPORTUNITIES</span></h2>
+            <div id="slogan" class="col-md-6">
+                  <h2 class="headline"><span class="upper">RE-ENGAGE AND CONVERT</span><br> <span class="lower">YOUR MISSED OPPORTUNITIES</span></h2>
 
-              <p class="tagline">Behavioural analytics &amp; contextual engagement <br>
-      through iBeacon technology.</p>
+                  <p class="tagline">Behavioural analytics &amp; contextual engagement <br>
+          through iBeacon technology.</p>
             </div>
           </div>
         </section>
@@ -130,6 +150,38 @@
         </section>
       </main>
       <footer>
+        <div class="row">
+          <div class="col-md-3">
+            <nav class="site-nav">
+              <ul class="nav">
+                    <li class="active"><a href="#" class="link">Home</a></li>
+                    <li><a href="#" class="link">About Us</a></li>
+                    <li><a class="link">Get In Touch</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-6">
+            <form class="form-inline subscription-form" role="form">
+              <h4>Sign up for newsletter</h4>
+              <div class="form-group">
+                <label class="sr-only" for="ns-email">Email address</label>
+                <input type="email" class="form-control" id="ns-email" placeholder="Enter your email address">
+              </div>
+              <button type="submit" class="btn btn-primary sign-up">Sign Up</button>
+            </form>
+          </div>
+          <div class="col-md-3">
+            <div class="connect-us">
+              <h4>Connect with Us</h4>
+              <!-- Twitter -->
+              <!-- Facebook -->
+              <ul class="social-network-list">
+                <li><a href="http://facebook.com/"><img src="images/icon_facebook.png"></a></li>
+                <li><a href="http://twitter.com/"><img src="images/icon_twitter.png"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <p class="copyright">Copyright &copy; 2014 - Loop Pulse, Inc</p>
       </footer>
     </div>
