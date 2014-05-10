@@ -268,9 +268,7 @@ $flow-max-width: 485px;
 }
 #analyze-dashboard {
     background: url(../images/dashboard_bg.png) bottom center no-repeat;
-    min-height: 465px;
     padding: { 
-        top: 0;
         bottom: 0;
     }
     h3 {
@@ -410,7 +408,6 @@ footer {
 
     #landing {
         padding: 10px;
-        padding-bottom: 10px;
     }
 
     #concept-flow {
@@ -545,7 +542,10 @@ footer {
         margin-top: 120px;
     }
 
-
+    #analyze-dashboard {
+        min-height: 465px;
+        padding-top: 0;
+    }
     #analyze-dashboard { 
         .concept-art .art {
             margin-top: -40px;
@@ -624,6 +624,17 @@ footer {
             margin-left: 0px;
             margin-bottom: 0;
         }
+    }
+
+        .demo-call,.get-demo {
+            vertical-align: middle;
+        }
+        .demo-call {
+            line-height: 1.4;
+        }
+     .get-demo {
+        font-size: 0.8em;
+        margin-left: 1em;
     }
 }
 
