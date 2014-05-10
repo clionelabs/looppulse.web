@@ -25,6 +25,8 @@ $link-normal: #007f7f;
 
 $base-font-size: 20px;
 
+$headline-color: #39c5d0;
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -680,4 +682,9 @@ footer {
             margin-left: 60px;
         }
     }
+}
+
+.about-us {
+    h1, h2 { color: $headline-color; text-align: center; }
+    article { float:none; margin-bottom: 3em }
 }

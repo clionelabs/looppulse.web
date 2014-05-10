@@ -7131,3 +7131,11 @@ footer .social-network-list li:first-child {
     margin-left: 60px;
   }
 }
+.about-us h1, .about-us h2 {
+  color: #39c5d0;
+  text-align: center;
+}
+.about-us article {
+  float: none;
+  margin-bottom: 3em;
+}
