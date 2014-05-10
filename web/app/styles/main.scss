@@ -264,7 +264,7 @@ $flow-max-width: 485px;
 
 // Section: Analyze
 #analyze {
-    padding-bottom: 0;
+
 }
 #analyze-dashboard {
     background: url(../images/dashboard_bg.png) bottom center no-repeat;
@@ -361,7 +361,14 @@ footer {
     }
 
     #analyze-dashboard h3 {
-        margin-top: 0px;
+        margin-top: 20px;
+    }
+
+    #analyze-dashboard { 
+        background-size: cover;
+        .concept-art .art {
+            margin-top: 0px;
+        }
     }
 
     #engage {
@@ -536,6 +543,13 @@ footer {
     }
     #analyze-dashboard h3 {
         margin-top: 120px;
+    }
+
+
+    #analyze-dashboard { 
+        .concept-art .art {
+            margin-top: -40px;
+        }
     }
     .call-for-action {    
         text-align: left;
