@@ -686,5 +686,23 @@ footer {
 
 .about-us {
     h1, h2 { color: $headline-color; text-align: center; }
-    article { float:none; margin-bottom: 3em }
+    article { 
+        float:none; 
+        margin-bottom: 3em;
+    }
+    .people {
+        margin-bottom: 2em;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    hr {
+        border:0;
+        height:1px;
+        background-color: $headline-color;
+        width: 70%;
+        margin: 0 auto 2em;
+    }
+
+
 }

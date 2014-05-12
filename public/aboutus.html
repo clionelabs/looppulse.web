@@ -14,7 +14,7 @@
 
     <script src="scripts/vendor/modernizr.js"></script>
   </head>
-  <body class="about-us">
+  <body>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -48,78 +48,105 @@
         </nav>
       </header>
 
-      <main class="row">
-        <article class="col-md-8 center-block">
-        <h1>About Us</h1>
+      <main class="about-us"> 
+        <div class="row">
+          <article class="col-md-6 center-block" id="about">
+          <h1>About Us</h1>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis lectus eu tortor malesuada congue. Etiam semper interdum dui ut tincidunt. Interdum et malesuada fames ac.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis lectus eu tortor malesuada congue. Etiam semper interdum dui ut tincidunt. Interdum et malesuada fames ac. </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis lectus eu tortor malesuada congue. Etiam semper interdum dui ut tincidunt. Interdum et malesuada fames ac.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis lectus eu tortor malesuada congue. Etiam semper interdum dui ut tincidunt. Interdum et malesuada fames ac. </p>
+          </article>
 
-        <h2>Founders</h2>
+          <article class="col-md-8 center-block" id="people">
+          <h2>Founders</h2>
 
-        <h3>Kaki Law</h3>
+          <div class="row people">
+            <div class="people-image col-md-4">
+              <img src="images/people/kaki.png">
+            </div>
+            <div class="people-intro col-md-8">
+            <h3>Kaki Law</h3>
 
-        <p>Co-Funder</p>
+            <p>Co-Funder</p>
 
-        <p>KaKi started his career as an interaction designer at R/GA after graduating from NYU’s ITP. He then moved on to Asia holding various creative leadership positions including Director of UX at SapientNitro and Isobar.</p>
+            <p>KaKi started his career as an interaction designer at R/GA after graduating from NYU’s ITP. He then moved on to Asia holding various creative leadership positions including Director of UX at SapientNitro and Isobar.</p>
+            </div>
+          </div>
 
-        <h3>Thomas Pun</h3>
+          <div class="row people">
 
-        <p>Co-Funder</p>
+            <div class="people-image col-md-4">
+              <img src="images/people/thomas.png">
+            </div>
+            <div class="people-intro col-md-8">
+            <h3>Thomas Pun</h3>
 
-        <p>Thomas worked at Apple leading QuickTime H.264 video encoder team. He then started a mobile startup funded by Y Combinator and other top tier angels and VCs in the valley. He served as a product CEO and led the company to acquisition. </p>
+            <p>Co-Funder</p>
 
-        <h2>Careers/We are Hiring</h2>
+            <p>Thomas worked at Apple leading QuickTime H.264 video encoder team. He then started a mobile startup funded by Y Combinator and other top tier angels and VCs in the valley. He served as a product CEO and led the company to acquisition. </p>
+            </div>
+          </div>
+          </article>
 
-        <p>We are currently looking for multiple software engineering founding team members who are passionate about crafting insanely great mobile and web products.</p>
+          <hr>
 
-        <p>Qualities our team value: </p>
+          <article class="col-md-6 center-block" id="hiring">
+          <h2>Careers/We are Hiring</h2>
 
-        <ul>
-        <li>Led mobile and web product development from inception to launch</li>
-        <li>Excellent problem solving and story telling skills</li>
-        <li>Love sharing through open source, talks and blogs</li>
-        <li>Products should be better, not just different</li>
-        <li>Opinionated but open-minded</li>
-        <li>Attention to details</li>
-        <li>Sense of visual and UX design</li>
-        <li>Psyched by the potential of iBeacons </li>
-        </ul><h3>Senior Web Engineer</h3>
+          <p>We are currently looking for multiple software engineering founding team members who are passionate about crafting insanely great mobile and web products.</p>
 
-        <p>Requirements: </p>
+          <p>Qualities our team value: </p>
 
-        <ul>
-        <li>Mastery of at least one modern programming language</li>
-        <li>Full stack from efficient backend to pixel prefect frontend</li>
-        <li>Experience in API design</li>
-        <li>Data visualization and machine learning experience a plus </li>
-        </ul><h3>Senior iOS Engineer</h3>
+          <ul>
+          <li>Led mobile and web product development from inception to launch</li>
+          <li>Excellent problem solving and story telling skills</li>
+          <li>Love sharing through open source, talks and blogs</li>
+          <li>Products should be better, not just different</li>
+          <li>Opinionated but open-minded</li>
+          <li>Attention to details</li>
+          <li>Sense of visual and UX design</li>
+          <li>Psyched by the potential of iBeacons </li>
+          </ul><h3>Senior Web Engineer</h3>
 
-        <p>Requirements: </p>
+          <p>Requirements: </p>
 
-        <ul>
-        <li>Enjoyed Mac development before the iPhone era</li>
-        <li>Developed iOS universal applications which got featured on App Store</li>
-        <li>Experience in developing iOS frameworks</li>
-        <li>iBeacon development experience a plus </li>
-        </ul><h3>Senior Android Engineer</h3>
+          <ul>
+          <li>Mastery of at least one modern programming language</li>
+          <li>Full stack from efficient backend to pixel prefect frontend</li>
+          <li>Experience in API design</li>
+          <li>Data visualization and machine learning experience a plus </li>
+          </ul><h3>Senior iOS Engineer</h3>
 
-        <p>Requirements: </p>
+          <p>Requirements: </p>
 
-        <ul>
-        <li>Developed Android applications featured on Google Play or other app stores.</li>
-        <li>Experience in developing Android libraries</li>
-        <li>Bluetooth LE development experience a plus </li>
-        </ul><h3>User Interface Designer</h3>
+          <ul>
+          <li>Enjoyed Mac development before the iPhone era</li>
+          <li>Developed iOS universal applications which got featured on App Store</li>
+          <li>Experience in developing iOS frameworks</li>
+          <li>iBeacon development experience a plus </li>
+          </ul><h3>Senior Android Engineer</h3>
 
-        <p>Requirements: </p>
+          <p>Requirements: </p>
 
-        <ul>
-        <li>Designed both web and mobile products for multilingual audience</li>
-        <li>High interest in data visualization</li>
-        <li>Frontend development experience a plus</li>
-        </ul>
-        </article>
+          <ul>
+          <li>Developed Android applications featured on Google Play or other app stores.</li>
+          <li>Experience in developing Android libraries</li>
+          <li>Bluetooth LE development experience a plus </li>
+          </ul><h3>User Interface Designer</h3>
+
+          <p>Requirements: </p>
+
+          <ul>
+          <li>Designed both web and mobile products for multilingual audience</li>
+          <li>High interest in data visualization</li>
+          <li>Frontend development experience a plus</li>
+          </ul>
+
+          <p>&nbsp;</p>
+          </article>
+        </div>  
       </main>
+
+
       <footer>
         <div class="row">
           <div class="col-md-3">

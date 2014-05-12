@@ -7139,3 +7139,16 @@ footer .social-network-list li:first-child {
   float: none;
   margin-bottom: 3em;
 }
+.about-us .people {
+  margin-bottom: 2em;
+}
+.about-us .people:last-child {
+  margin-bottom: 0;
+}
+.about-us hr {
+  border: 0;
+  height: 1px;
+  background-color: #39c5d0;
+  width: 70%;
+  margin: 0 auto 2em;
+}
