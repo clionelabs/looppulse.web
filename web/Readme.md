@@ -25,3 +25,8 @@ When you are ready to deploy, run:
 after the build end, run this command to copy it to `public/`
 
 `gulp copy`
+
+## survival note
+
+- When your script/style have error(s), gulp watch will be terminated
+- If you see something like "EADDRINUSE" in your error message, reboot.
