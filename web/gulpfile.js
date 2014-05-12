@@ -28,6 +28,22 @@ gulp.task('copy', function(){
     .pipe($.size())
 });
 
+gulp.task('templates', function(){
+    gulp.src(["./app/templates/*.mustache","!./app/templates/_*.mustache"])
+        .pipe($.debug())
+        .pipe($.mustachePlus({
+            /* variable */
+        },{
+            /* options */
+        },{
+            header: "app/templates/_header.mustache",
+            footer: "app/templates/_footer.mustache"
+        }))
+        .pipe(gulp.dest("./app"))
+        .pipe($.debug())
+        .pipe($.size())
+})
+
 gulp.task('coffee', function() {
   return gulp.src('app/scripts/*.coffee')
     .pipe($.coffee({bare: true}).on('error', $.util.log))
@@ -42,7 +58,7 @@ gulp.task('scripts', function () {
         .pipe($.size());
 });
 
-gulp.task('html', ['styles', 'coffee'], function () {
+gulp.task('html', ['templates', 'styles', 'coffee'], function () {
     var jsFilter = $.filter('**/*.js');
     var cssFilter = $.filter('**/*.css');
 
@@ -109,7 +125,7 @@ gulp.task('connect', function () {
         });
 });
 
-gulp.task('serve', ['connect', 'styles', 'coffee'], function () {
+gulp.task('serve', ['connect', 'html', 'styles', 'coffee'], function () {
     require('opn')('http://localhost:9000');
 });
 
@@ -137,6 +153,7 @@ gulp.task('watch', ['connect', 'serve'], function () {
     // watch for changes
 
     gulp.watch([
+        'app/templates/*.mustache',
         'app/*.html',
         '.tmp/styles/**/*.css',
         '.tmp/scripts/**/*.{js,coffee}',
@@ -144,7 +161,7 @@ gulp.task('watch', ['connect', 'serve'], function () {
     ]).on('change', function (file) {
         server.changed(file.path);
     });
-
+    gulp.watch('app/templates/*.mustache', ['html'])
     gulp.watch('app/styles/**/*.scss', ['styles']);
     gulp.watch('app/scripts/**/*.{js,coffee}', ['coffee']);
     gulp.watch('app/images/**/*', ['images']);

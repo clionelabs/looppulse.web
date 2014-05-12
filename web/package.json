@@ -27,7 +27,9 @@
     "opn": "^0.1.1",
     "wiredep": "^1.4.3",
     "gulp-debug": "^0.3.0",
-    "gulp-rename": "^1.2.0"
+    "gulp-rename": "^1.2.0",
+    "gulp-mustache": "^0.3.1",
+    "gulp-mustache-plus": "^1.0.1"
   },
   "engines": {
     "node": ">=0.10.0"
