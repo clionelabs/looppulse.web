@@ -110,14 +110,24 @@ section {
 }
 
 
-.navbar-toggle {
+.navbar .navbar-toggle {
     margin-right: 15px;
     padding: 9px 10px;
-    margin-top: 8px;
+    margin-top: 14px;
     margin-bottom: 8px;
     border: none;
     border-radius: 0;
+    .icon-bar {
+        background-color: $link-hover;
+        width: 32px;
+        height:3px;
+    }
+    &:hover .icon-bar {
+
+        background-color: $link-normal;
+    }
 }
+
 
 body > .container {
     padding: 0;
