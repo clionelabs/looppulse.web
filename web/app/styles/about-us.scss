@@ -1,11 +1,8 @@
 
-.about-us {
-    padding: 20px 30px;
+.about-us.page {
     font-size: 22px;
-    h1, h2 { color: $headline-color; text-align: center; font-size: 2.2em; }
     h3, h4 { color: #7d7d7d;}
     article { 
-        float:none; 
         margin-bottom: 3em;
     }
     .people {
@@ -29,12 +26,8 @@
 }
 
 @media (min-width: $screen-sm-min) { 
-    .about-us { 
-        padding: 60px 50px; 
+    .about-us.page { 
 
-        h1,h2 {
-            margin-bottom: 0.5em;
-        }
         .people{
             .people-image, h3, h4 {
                 text-align: left;

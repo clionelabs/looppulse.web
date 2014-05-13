@@ -86,7 +86,9 @@ section {
 
 
 // bootstrap override
-
+.center-block {
+    float:none;
+}
 .btn-primary {
   color: white;
   background-color: $button-bg;
@@ -105,6 +107,9 @@ section {
     border-radius:0;
     border: none;
 }
+.form-horizontal .control-label {
+    font-weight: normal;
+}
 .btn {
     font-size: $base-font-size;
 }
@@ -112,7 +117,9 @@ section {
 body > .container {
     padding: 0;
 }
-
+.col-wrap {
+    margin: 0 -15px;
+}
 // Bootstrap override in specific part
 header .container-fluid {
     padding: 0;
@@ -137,7 +144,7 @@ header .navbar-header {
         background-color: $link-normal;
     }
 }
-#main-navbar-collapse.navbar-collapse { 
+#main-navbar-collapse.navbar-collapse.in { 
     margin: 0;
     padding: 0;
     .nav.navbar-nav {
@@ -225,6 +232,11 @@ header {
 
 }
 
+// Page Share
+.page {
+    padding: 20px 30px;
+    h1, h2 { color: $headline-color; text-align: center; font-size: 2.2em; }
+}
 
 // Footer
 footer {
@@ -266,6 +278,7 @@ footer {
 
 @import "./index";
 @import "./about-us";
+@import "./contact";
 
 // Some Override
 #landing li.concept {
@@ -340,6 +353,13 @@ footer {
         width: 278px;
         height: 85px;
         margin: 7px 0 7px 20px; //-30 because of navbar etc
+    }
+    .page { 
+        padding: 30px 50px; 
+        
+        h1,h2 {
+            margin-bottom: 0.5em;
+        }
     }
 
 }

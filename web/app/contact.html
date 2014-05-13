@@ -54,102 +54,85 @@
           </div><!-- /.container-fluid -->
         </nav>
       </header>
-
-      <main class="about-us page"> 
+      <main class="contact page"> 
         <div class="row">
-          <article class="col-md-7 center-block" id="about">
-          <h1>About Us</h1>
+          <div class="col-md-7 center-block" id="contact">
+            <h1>Get In Touch</h1>
+            <form class="form-horizontal" role="form">
+              <div class="form-group">
+                <label for="name" class="col-sm-4 control-label">Name</label>
+                <div class="col-sm-6">
+                  <div class="col-wrap">
+                    <div class="col-xs-6">
+                      <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
+                    </div>
+                    <div class="col-xs-6">
+                      <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+                    </div>
+                  </div>
+                </div>
+                <input type="hidden" id="name" name="name">
+              </div>
+              <div class="form-group">
+                <label for="jobTitle" class="col-sm-4 control-label">Job Title</label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="jobTitle" name="jobTitle" placeholder="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="companyName" class="col-sm-4 control-label">Company Name</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="companyName"  name="companyName" placeholder="">
+                </div>
+              </div>
 
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis lectus eu tortor malesuada congue. Etiam semper interdum dui ut tincidunt. Interdum et malesuada fames ac.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis lectus eu tortor malesuada congue. Etiam semper interdum dui ut tincidunt. Interdum et malesuada fames ac. </p>
-          </article>
+              <div class="form-group">
+                <label for="companyType" class="col-sm-4 control-label">Company Type</label>
+                <div class="col-sm-3">
+                  <select class="form-control" id="companyType"  name="companyType">
+                    
+                  </select>
+                </div>
+              </div>
 
-          <article class="col-md-10 center-block" id="people">
-          <h2>Founders</h2>
+              <div class="form-group">
+                <label for="region" class="col-sm-4 control-label">Region</label>
+                <div class="col-sm-3">
+                  <select class="form-control" id="region"  name="region">
+                    
+                  </select>
+                </div>
+              </div>
 
-          <div class="row people">
-            <div class="people-image col-md-3">
-              <img src="images/people/kaki.png">
-            </div>
-            <div class="people-intro col-md-9">
-            <h3>Kaki Law</h3>
+              <div class="form-group">
+                  <label for="email" class="col-sm-4 control-label">Email</label>
+                  <div class="col-sm-6">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                  </div>
+              </div>
 
-            <h4>Co-Funder</h4>
+              <div class="form-group">
+                  <label for="tel" class="col-sm-4 control-label">Phone Number</label>
+                  <div class="col-sm-4">
+                    <input type="tel" class="form-control" id="tel" name="tel" placeholder="">
+                  </div>
+              </div>
 
-            <p>KaKi started his career as an interaction designer at R/GA after graduating from NYU’s ITP. He then moved on to Asia holding various creative leadership positions including Director of UX at SapientNitro and Isobar.</p>
-            </div>
+              <div class="form-group">
+                <label for="msg" class="col-sm-4 control-label">Message</label>
+                <div class="col-sm-8">
+                  <textarea id="msg" name="msg" class="form-control" rows="6"></textarea>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-6">
+                  <button type="submit" class="btn btn-default btn-primary">Submit</button>
+                </div>
+              </div>
+            </form>
+
           </div>
-
-          <div class="row people">
-
-            <div class="people-image col-md-3">
-              <img src="images/people/thomas.png">
-            </div>
-            <div class="people-intro col-md-9">
-            <h3>Thomas Pun</h3>
-
-            <h4>Co-Funder</h4>
-
-            <p>Thomas worked at Apple leading QuickTime H.264 video encoder team. He then started a mobile startup funded by Y Combinator and other top tier angels and VCs in the valley. He served as a product CEO and led the company to acquisition. </p>
-            </div>
-          </div>
-          </article>
-
-          <hr>
-
-          <article class="col-md-7 center-block" id="hiring">
-          <h2>Careers/We are Hiring</h2>
-
-          <p>We are currently looking for multiple software engineering founding team members who are passionate about crafting insanely great mobile and web products.</p>
-
-          <p>Qualities our team value: </p>
-
-          <ul>
-          <li>Led mobile and web product development from inception to launch</li>
-          <li>Excellent problem solving and story telling skills</li>
-          <li>Love sharing through open source, talks and blogs</li>
-          <li>Products should be better, not just different</li>
-          <li>Opinionated but open-minded</li>
-          <li>Attention to details</li>
-          <li>Sense of visual and UX design</li>
-          <li>Psyched by the potential of iBeacons </li>
-          </ul><h3>Senior Web Engineer</h3>
-
-          <p>Requirements: </p>
-
-          <ul>
-          <li>Mastery of at least one modern programming language</li>
-          <li>Full stack from efficient backend to pixel prefect frontend</li>
-          <li>Experience in API design</li>
-          <li>Data visualization and machine learning experience a plus </li>
-          </ul><h3>Senior iOS Engineer</h3>
-
-          <p>Requirements: </p>
-
-          <ul>
-          <li>Enjoyed Mac development before the iPhone era</li>
-          <li>Developed iOS universal applications which got featured on App Store</li>
-          <li>Experience in developing iOS frameworks</li>
-          <li>iBeacon development experience a plus </li>
-          </ul><h3>Senior Android Engineer</h3>
-
-          <p>Requirements: </p>
-
-          <ul>
-          <li>Developed Android applications featured on Google Play or other app stores.</li>
-          <li>Experience in developing Android libraries</li>
-          <li>Bluetooth LE development experience a plus </li>
-          </ul><h3>User Interface Designer</h3>
-
-          <p>Requirements: </p>
-
-          <ul>
-          <li>Designed both web and mobile products for multilingual audience</li>
-          <li>High interest in data visualization</li>
-          <li>Frontend development experience a plus</li>
-          </ul>
-
-          <p>&nbsp;</p>
-          </article>
         </div>  
       </main>
 
