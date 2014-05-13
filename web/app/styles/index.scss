@@ -32,8 +32,19 @@ $landing-flow-max-width: 485px;
 }
 #slogan {
     text-align: center;
-    h2 { font-size: 2em; margin-top: 0em; }
-    .tagline { font-size: 1.3em; }
+    &, h2 { font-family: 'PT Sans Narrow', sans-serif; }
+    h2 { font-size: 1em; margin-top: 0em; font-weight: bold; }
+
+    .headline {
+        font-size: 1.3em;
+        .upper { 
+            letter-spacing: 0.08em
+        }
+        .lower{
+            letter-spacing: normal
+        }
+    }
+    .tagline { font-size: 1em; }
 }
 #concepts {
     position:relative;
@@ -57,6 +68,7 @@ $landing-flow-max-width: 485px;
             width: 100%;
             max-width: $landing-flow-max-width;
             margin-bottom:0.2em;
+            font-size: 0.9em
         }
         .collect {
             top: 0;
@@ -175,6 +187,7 @@ $landing-flow-max-width: 485px;
 
     #concept-flow {
         .concept-list {
+            li { font-size: 1em; }
             .engage {
                 bottom: 0.4em;
                 left: 3em;
@@ -184,6 +197,10 @@ $landing-flow-max-width: 485px;
                 margin-left: -2.8em;
             }
         }
+    }
+    #slogan {
+        .headline { font-size: 40px; }
+        .tagline { font-size: 1.5em; }
     }
     #engage {
         .concept-art {
@@ -201,14 +218,14 @@ $landing-flow-max-width: 485px;
     }
 }
 @media (min-width: 600px) {
-    footer, section {
-        padding: 50px 30px;
+    #slogan {
+        .headline { font-size: 45px; }
     }
     .concept-article {
         margin-bottom: 50px;
     }
     .call-for-action {
-        font-size: 1.4em; //28px
+        font-size: 1.3em; //28px
     }
 }
 
@@ -223,6 +240,9 @@ $landing-flow-max-width: 485px;
     #landing {
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+    #slogan {
+        .headline { font-size: 60px; }
     }
 
 }

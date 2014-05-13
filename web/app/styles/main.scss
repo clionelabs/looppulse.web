@@ -53,22 +53,17 @@ img { -ms-interpolation-mode: bicubic; image-rendering:optimizeQuality; }
 // Typographic
 body {
     //font-family: "HelveticaNeueLTStd-Cn", "Helvetica Neue LT Std Condensed", "Open Sans Condensed", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", sans-serif ;
-    font-family: "Open Sans Condensed", sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
     line-height: 1.2;
     font-size: 20px;
     letter-spacing: normal; //0.06em ;
     letter-spacing: 0.05em;
 }
-
-.headline {
-    font-family: "Open Sans Condensed", sans-serif;
-    .upper { 
-        letter-spacing: 0.05em
-    }
-    .lower{
-        letter-spacing: -0.025em
-    }
+h1,h2,h3, .section-title {
+    font-family: 'Francois One', sans-serif;
+    font-weight: normal;
 }
+
 h2 {
     font-size: 1.6em;
 }
@@ -83,7 +78,9 @@ section {
         font-size: 50px;
         letter-spacing: 0.1em;
         line-height: 1.2;
-        font-weight: 700;
+    }
+    p {
+        font-size: 1.1em; //22px
     }
 }
 
@@ -235,11 +232,14 @@ footer {
         font-size: 0.7em;
     }
 }
-// Some Override
 
 @import "./index";
 @import "./about-us";
 
+// Some Override
+#landing li.concept {
+    @extend .section-title;
+}
 
 // Media Queries
 // General Flow:
