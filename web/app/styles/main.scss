@@ -499,12 +499,53 @@ footer {
     }
 
 }
+@media (min-width: 800px) {
 
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 1024px) { 
-    .container {
-        width: 1024px;
+    // Section: Engage
+    #engage {
+        .concept-art {
+            position:relative;
+            height: 345px;
+
+            &.engage-art {
+                width: 39%;
+                float: right;
+            }
+            &.plane-art {
+                transform:  none;
+                width: 22%;
+                padding: 0;
+                float: right;
+            }
+            &.laptop-art {
+                width: 39%;
+                float: right;
+            }
+
+            .art {
+                position:absolute;
+                max-height: 100%;
+                &[alt="engage"] { 
+                    bottom:0;
+                    left: -40px; 
+
+                }
+                &[alt="laptop"] { 
+                    right: 0px; 
+                    bottom:0;
+                }
+                &[alt="plane"] {
+                    bottom: 115px;
+                    right:0;
+                }
+            }
+
+        }
     }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) { 
+
     .concept-article h2 {
         margin-top: 40px;
     }
@@ -566,46 +607,9 @@ footer {
         }
     }
 
-    // Section: Engage
     #engage {
         .concept-art {
-            position:relative;
             height: 445px;
-
-            &.engage-art {
-                width: 39%;
-                float: right;
-            }
-            &.plane-art {
-                -webkit-transform:  none;
-                transform:  none;
-                width: 22%;
-                padding: 0;
-                float: right;
-            }
-            &.laptop-art {
-                width: 39%;
-                float: right;
-            }
-
-            .art {
-                position:absolute;
-                max-height: 100%;
-                &[alt="engage"] { 
-                    bottom:0;
-                    left: -40px; 
-
-                }
-                &[alt="laptop"] { 
-                    right: 0px; 
-                    bottom:0;
-                }
-                &[alt="plane"] {
-                    bottom: 115px;
-                    right:0;
-                }
-            }
-
         }
     }
 
@@ -637,6 +641,11 @@ footer {
      .get-demo {
         font-size: 0.8em;
         margin-left: 1em;
+    }
+}
+@media (min-width: 1024px) { 
+    .container {
+        width: 1024px;
     }
 }
 
