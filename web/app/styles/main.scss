@@ -109,7 +109,17 @@ section {
     font-size: $base-font-size;
 }
 
+body > .container {
+    padding: 0;
+}
 
+// Bootstrap override in specific part
+header .container-fluid {
+    padding: 0;
+}
+header .navbar-header {
+    padding: { left: 15px; right: 15px; }
+}
 .navbar .navbar-toggle {
     margin-right: 15px;
     padding: 9px 10px;
@@ -127,11 +137,21 @@ section {
         background-color: $link-normal;
     }
 }
-
-
-body > .container {
+#main-navbar-collapse.navbar-collapse { 
+    margin: 0;
     padding: 0;
+    .nav.navbar-nav {
+        margin: 0.5em 0 0;
+        padding: 0;
+        .btn.get-in-touch {
+            border-radius: 0;
+            text-align: left;
+            margin: 0;
+            padding: 15px;
+        }
+    }
 }
+
 
 // Common Class
 .photo, .icon-badge, .art {
@@ -180,6 +200,7 @@ header {
 #site-nav {
     border-radius: 0;
     margin-bottom: 0;
+    border: none;
     .nav {
         font-size: 1em;
         margin-top: 1.4em;
