@@ -34,10 +34,10 @@ $headline-color: #39c5d0;
     padding: 0.2em 0;
 }
 
-//mixins are in.
+// mixins are in.
 
 
-//override
+// General override
 body {
     color: $text-color;
 
@@ -50,7 +50,7 @@ a {
 }
 img { -ms-interpolation-mode: bicubic; image-rendering:optimizeQuality; }
 
-//Typographic
+// Typographic
 body {
     //font-family: "HelveticaNeueLTStd-Cn", "Helvetica Neue LT Std Condensed", "Open Sans Condensed", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", sans-serif ;
     font-family: "Open Sans Condensed", sans-serif;
@@ -88,7 +88,7 @@ section {
 }
 
 
-//bootstrap override
+// bootstrap override
 
 .btn-primary {
   color: white;
@@ -112,11 +112,21 @@ section {
     font-size: $base-font-size;
 }
 
+
+.navbar-toggle {
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 0;
+}
+
 body > .container {
     padding: 0;
 }
 
-//Common
+// Common Class
 .photo, .icon-badge, .art {
     max-width: 100%;
 }
@@ -139,9 +149,7 @@ body > .container {
     padding: 0.3em 1em;
 }
 
-
-
-//Sections
+// Header
 header {
     border-bottom: 13px solid $tint-color;
     margin: 0;
@@ -161,6 +169,7 @@ header {
         margin: 7px 0 0 7px
     }
 }
+// Main Nav 
 #site-nav {
     border-radius: 0;
     margin-bottom: 0;
@@ -187,126 +196,26 @@ header {
     }
 
 }
-section {
-    background-color:  $primary-color;
-    color: $text-color;
-    padding: 50px 88px;
-    &.alt {
-        background-color: $alt-color;
-        color: $alt-text-color;
-    }
-}
-
-//Section common
-.concept-article h2 {
-    margin-top: 80px;
-}
-
-//Specific Section
-$flow-max-width: 485px;
-#landing {
-    background: #b5e6e6 url(../images/landing_bg.png) top left no-repeat;
-    background-size: cover;
-    color: $alt-text-color;
-
-}
-// Sub Section: Landing
-#slogan {
-    text-align: center;
-    h2 { font-size: 2em; margin-top: 0em; }
-    .tagline { font-size: 1.3em; }
-}
-#concepts {
-    position:relative;
-    padding:0;
-    font-size: 1.4em;
-}
-#concept-flow {
-    width: 100%;
-    max-width: 485px;
-    height: auto;
-    max-height: 450px;
-    overflow:hidden;
-    margin:0 auto;
-    position:relative;
-
-    .concept-list {
-        list-style:none;
-        padding: 0;
-        li {
-            position: absolute;
-            width: 100%;
-            max-width: $flow-max-width;
-            margin-bottom:0.2em;
-        }
-        .collect {
-            top: 0;
-            text-align: center;
-        }
-        .engage {
-            bottom: 0em;
-            //left: 3em;
-            left:1.5em;
-            text-align: left;
-        }
-        .analyze {
-            bottom: 0em;
-            left: 0;
-            margin-left: -1.5em; //3em
-
-            text-align: right;
-        }
-    }
-    .art {
-        margin-top: 0.9em;
-        margin-bottom: -0.4em;
-        //margin-bottom: -1.4em;
-    }
-}
-
-// Section: Analyze
-#analyze {
-
-}
-#analyze-dashboard {
-    background: url(../images/dashboard_bg.png) bottom center no-repeat;
-    padding: { 
-        bottom: 0;
-    }
-    h3 {
-        color: $em-text-color;
-        margin-bottom: 0.4em;
-        margin-top: 120px; 
-    }
-    .concept-art .art {
-        margin-top:-40px;
-    }
-}
 
 
-
+// Footer
 footer {
     background-color: $footer-color;
     color: $alt-text-color;
     padding: 50px;
+    // Common
     a {
         color: $alt-text-color;
     }
-    .copyright {
-        text-align: center;
-        margin-top: 20px;
-        font-size: 0.7em;
-    }
-    .nav {
-        font-size: 1.2em;
-    }
-    // Common Footer item
     h4 {
         margin-bottom:1.2em;
     }
 
-
-    // Social Media Etc
+    // i. Nav 
+    .nav {
+        font-size: 1.2em;
+    }
+    // iii. Social Media Etc
     .social-network-list {
         ul {
             list-style: none;
@@ -320,70 +229,29 @@ footer {
             }
         }
     }
+    .copyright {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.7em;
+    }
 }
+// Some Override
 
-// Some thing Else
+@import "./index";
+@import "./about-us";
 
-.navbar-toggle {
-    position: relative;
-    float: right;
-    margin-right: 15px;
-    padding: 9px 10px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    background-color: transparent;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
 
+// Media Queries
+// General Flow:
+// - Basic (container, footer, header, section )
+// - header specific
+// - section common component (essential)
+// - footer specific
 
 /* Extra small devices (phones, less than 768px) */
 @media screen and (min-width: 320px) {
     footer, section {
         padding: 15px;
-    }
-
-    .logo-holder, section h2, section h3, section p {
-        text-align: center;
-    }
-
-    .concept-article {
-        margin-bottom: 30px;
-        h2 {
-            margin-top: 0px;
-        }
-    }
-
-    #landing {
-        padding: 10px;
-        padding-bottom: 10px;
-    }
-
-    #analyze-dashboard h3 {
-        margin-top: 20px;
-    }
-
-    #analyze-dashboard { 
-        background-size: cover;
-        .concept-art .art {
-            margin-top: 0px;
-        }
-    }
-
-    #engage {
-        .concept-art {
-            &.plane-art {
-                transform: translate(-15%, -60px) rotate(-45deg);
-            }
-        }
-    }
-
-    .call-for-action {
-        text-align: center;
-        .action-statement, .action-button { display: block; }
-        .action-statement { margin-bottom: 1em; }
-        .get-in-touch { margin: 0 auto; }
     }
 
     footer {
@@ -408,46 +276,6 @@ footer {
         padding: 15px;
     }
 
-    #landing {
-        padding: 10px;
-    }
-
-    #concept-flow {
-        .concept-list {
-            li {
-                position: absolute;
-                width: 100%;
-                max-width: $flow-max-width;
-                margin-bottom:0.4em;
-            }
-            .engage {
-                bottom: 0.4em;
-                left: 3em;
-            }
-            .analyze {
-                bottom: 0.4em;
-                margin-left: -2.8em;
-            }
-        }
-        .art {
-        //margin-bottom: -1.4em;
-        }
-    }
-       // Section: Engage
-    #engage {
-        .concept-art {
-            &.engage-art {
-                float: right;
-            }
-            &.plane-art {
-                transform: translate(15%, -60px) rotate(-30deg);
-                float: left;
-            }
-            &.laptop-art {
-                float: left;
-            }
-        }
-    }
     footer {
 
         form.subscription-form {
@@ -464,15 +292,8 @@ footer {
     }
 }
 @media (min-width: 600px) {
-
     footer, section {
         padding: 50px 30px;
-    }
-    .concept-article {
-        margin-bottom: 50px;
-    }
-    .call-for-action {
-        font-size: 1.4em; //28px
     }
 }
 
@@ -484,14 +305,6 @@ footer {
     footer, section {
         padding: 50px;
     }
-    .logo-holder {
-        text-align: center;
-    }
-
-    #landing {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
     header .site-name {
         width: 278px;
         height: 85px;
@@ -499,120 +312,9 @@ footer {
     }
 
 }
-@media (min-width: 800px) {
-
-    // Section: Engage
-    #engage {
-        .concept-art {
-            position:relative;
-            height: 345px;
-
-            &.engage-art {
-                width: 39%;
-                float: right;
-            }
-            &.plane-art {
-                transform:  none;
-                width: 22%;
-                padding: 0;
-                float: right;
-            }
-            &.laptop-art {
-                width: 39%;
-                float: right;
-            }
-
-            .art {
-                position:absolute;
-                max-height: 100%;
-                &[alt="engage"] { 
-                    bottom:0;
-                    left: -40px; 
-
-                }
-                &[alt="laptop"] { 
-                    right: 0px; 
-                    bottom:0;
-                }
-                &[alt="plane"] {
-                    bottom: 115px;
-                    right:0;
-                }
-            }
-
-        }
-    }
-}
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: $screen-md-min) { 
-
-    .concept-article h2 {
-        margin-top: 40px;
-    }
-    .call-for-action .action-statement {
-        font-size: 38px;
-    }
-    #landing {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
-
-    #landing {
-        h2, h3, .tagline {
-            text-align: center;
-        }
-    }
-    #concepts {
-        margin-bottom: 75px;
-        margin-left: -30px;
-    }
-
-    #slogan {
-        h2 {
-            margin-top: 100px;
-            font-size: 1.8em;
-        }
-    }
-
-    .logo-holder img {
-        margin-left: -14px;
-    }
-    .logo-holder, section h2, section h3, section p {
-        text-align: left;
-    }
-    #analyze-dashboard h3 {
-        margin-top: 120px;
-    }
-
-    #analyze-dashboard {
-        min-height: 465px;
-        padding-top: 0;
-    }
-    #analyze-dashboard { 
-        .concept-art .art {
-            margin-top: -40px;
-        }
-    }
-    .call-for-action {    
-        text-align: left;
-        .action-statement, .action-button { 
-            display: inline-block; 
-            vertical-align: middle; 
-        }
-        .action-statement { margin-bottom: 0; }
-        .action-button { float: right; }
-        .get-in-touch {
-            margin: 0 0 0 0.6em;
-        }
-    }
-
-    #engage {
-        .concept-art {
-            height: 445px;
-        }
-    }
-
+    // Footer
     footer {
         form.subscription-form {
             margin-bottom: 0;
@@ -631,17 +333,6 @@ footer {
             margin-bottom: 0;
         }
     }
-
-        .demo-call,.get-demo {
-            vertical-align: middle;
-        }
-        .demo-call {
-            line-height: 1.4;
-        }
-     .get-demo {
-        font-size: 0.8em;
-        margin-left: 1em;
-    }
 }
 @media (min-width: 1024px) { 
     .container {
@@ -651,11 +342,9 @@ footer {
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1280px) { 
+    // Basic
     .container {
       width: 1280px;
-    }
-    .concept-article h2 {
-        margin-top: 80px;
     }
     footer, section { 
         padding: 50px 80px;
@@ -663,20 +352,8 @@ footer {
     header .site-name {
         margin-left: 40px; //-30 because of navbar etc
     }
-    .call-for-action  .action-statement {
-        font-size: 40px;
-    }
-    #slogan {
-        width: 55%;
-        h2 {
-            margin-top: 140px;
-            font-size: 2.6em;
-        }
-    }
-    #concepts{
-        width: 45%;
-    }
 
+    // Footer
     footer {
         nav.site-nav {
             margin-left: 20px
@@ -691,27 +368,4 @@ footer {
             margin-left: 60px;
         }
     }
-}
-
-.about-us {
-    h1, h2 { color: $headline-color; text-align: center; }
-    article { 
-        float:none; 
-        margin-bottom: 3em;
-    }
-    .people {
-        margin-bottom: 2em;
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-    hr {
-        border:0;
-        height:1px;
-        background-color: $headline-color;
-        width: 70%;
-        margin: 0 auto 2em;
-    }
-
-
 }
