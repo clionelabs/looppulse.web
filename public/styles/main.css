@@ -6543,21 +6543,16 @@ img {
 }
 
 body {
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
   line-height: 1.2;
   font-size: 20px;
   letter-spacing: normal;
   letter-spacing: 0.05em;
 }
 
-.headline {
-  font-family: "Open Sans Condensed", sans-serif;
-}
-.headline .upper {
-  letter-spacing: 0.05em;
-}
-.headline .lower {
-  letter-spacing: -0.025em;
+h1, h2, h3, .section-title, #landing li.concept {
+  font-family: 'Francois One', sans-serif;
+  font-weight: normal;
 }
 
 h2 {
@@ -6576,7 +6571,13 @@ section h2, section h3 {
   font-size: 50px;
   letter-spacing: 0.1em;
   line-height: 1.2;
-  font-weight: 700;
+}
+section p {
+  font-size: 1.1em;
+}
+
+.center-block {
+  float: none;
 }
 
 .btn-primary, #site-nav .nav .get-in-touch {
@@ -6598,12 +6599,61 @@ section h2, section h3 {
   border: none;
 }
 
+.form-horizontal .control-label {
+  font-weight: normal;
+}
+
 .btn {
   font-size: 20px;
 }
 
 body > .container {
   padding: 0;
+}
+
+.col-wrap {
+  margin: 0 -15px;
+}
+
+header .container-fluid {
+  padding: 0;
+}
+
+header .navbar-header {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar .navbar-toggle {
+  margin-right: 15px;
+  padding: 9px 10px;
+  margin-top: 14px;
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 0;
+}
+.navbar .navbar-toggle .icon-bar {
+  background-color: #33cccc;
+  width: 32px;
+  height: 3px;
+}
+.navbar .navbar-toggle:hover .icon-bar {
+  background-color: #007f7f;
+}
+
+#main-navbar-collapse.navbar-collapse.in {
+  margin: 0;
+  padding: 0;
+}
+#main-navbar-collapse.navbar-collapse.in .nav.navbar-nav {
+  margin: 0.5em 0 0;
+  padding: 0;
+}
+#main-navbar-collapse.navbar-collapse.in .nav.navbar-nav .btn.get-in-touch {
+  border-radius: 0;
+  text-align: left;
+  margin: 0;
+  padding: 15px;
 }
 
 .photo, .icon-badge, .art {
@@ -6649,6 +6699,7 @@ header .site-name {
 #site-nav {
   border-radius: 0;
   margin-bottom: 0;
+  border: none;
 }
 #site-nav .nav {
   font-size: 1em;
@@ -6666,6 +6717,46 @@ header .site-name {
 }
 #site-nav .nav .get-in-touch {
   font-size: 1em;
+}
+
+.page {
+  padding: 20px 30px;
+}
+.page h1, .page h2 {
+  color: #39c5d0;
+  text-align: center;
+  font-size: 2.2em;
+}
+
+footer {
+  background-color: #7d7d7d;
+  color: white;
+  padding: 50px;
+}
+footer a {
+  color: white;
+}
+footer h4 {
+  margin-bottom: 1.2em;
+}
+footer .nav {
+  font-size: 1.2em;
+}
+footer .social-network-list ul {
+  list-style: none;
+}
+footer .social-network-list li {
+  display: inline;
+  padding: 0;
+}
+footer .social-network-list li:first-child {
+  margin-right: 40px;
+  margin-left: -20px;
+}
+footer .copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.7em;
 }
 
 section {
@@ -6691,12 +6782,25 @@ section.alt {
 #slogan {
   text-align: center;
 }
+#slogan, #slogan h2 {
+  font-family: 'PT Sans Narrow', sans-serif;
+}
 #slogan h2 {
-  font-size: 2em;
+  font-size: 1em;
   margin-top: 0em;
+  font-weight: bold;
+}
+#slogan .headline {
+  font-size: 1.3em;
+}
+#slogan .headline .upper {
+  letter-spacing: 0.08em;
+}
+#slogan .headline .lower {
+  letter-spacing: normal;
 }
 #slogan .tagline {
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 #concepts {
@@ -6723,6 +6827,7 @@ section.alt {
   width: 100%;
   max-width: 485px;
   margin-bottom: 0.2em;
+  font-size: 0.9em;
 }
 #concept-flow .concept-list .collect {
   top: 0;
@@ -6757,78 +6862,29 @@ section.alt {
   margin-top: -40px;
 }
 
-footer {
-  background-color: #7d7d7d;
-  color: white;
-  padding: 50px;
-}
-footer a {
-  color: white;
-}
-footer .copyright {
+.logo-holder, section h2, section h3, section p {
   text-align: center;
-  margin-top: 20px;
-  font-size: 0.7em;
-}
-footer .nav {
-  font-size: 1.2em;
-}
-footer h4 {
-  margin-bottom: 1.2em;
-}
-footer .social-network-list ul {
-  list-style: none;
-}
-footer .social-network-list li {
-  display: inline;
-  padding: 0;
-}
-footer .social-network-list li:first-child {
-  margin-right: 40px;
-  margin-left: -20px;
 }
 
-.navbar-toggle {
-  position: relative;
-  float: right;
-  margin-right: 15px;
-  padding: 9px 10px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  background-color: transparent;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
+.concept-article {
+  margin-bottom: 30px;
+}
+.concept-article h2 {
+  margin-top: 0px;
 }
 
 /* Extra small devices (phones, less than 768px) */
 @media screen and (min-width: 320px) {
-  footer, section {
-    padding: 15px;
-  }
-
-  .logo-holder, section h2, section h3, section p {
-    text-align: center;
-  }
-
-  .concept-article {
-    margin-bottom: 30px;
-  }
-  .concept-article h2 {
-    margin-top: 0px;
-  }
-
   #landing {
     padding: 10px;
     padding-bottom: 10px;
   }
 
-  #analyze-dashboard h3 {
-    margin-top: 20px;
-  }
-
   #analyze-dashboard {
     background-size: cover;
+  }
+  #analyze-dashboard h3 {
+    margin-top: 20px;
   }
   #analyze-dashboard .concept-art .art {
     margin-top: 0px;
@@ -6851,35 +6907,14 @@ footer .social-network-list li:first-child {
   .call-for-action .get-in-touch {
     margin: 0 auto;
   }
-
-  footer h4 {
-    margin-bottom: 1em;
-  }
-  footer .site-nav {
-    margin-left: -15px;
-    margin-bottom: 2em;
-  }
-  footer .subscription-form {
-    margin-bottom: 2em;
-  }
-  footer .sign-up {
-    margin-left: 0;
-  }
 }
 @media screen and (min-width: 480px) {
-  footer, section {
-    padding: 15px;
-  }
-
   #landing {
     padding: 10px;
   }
 
   #concept-flow .concept-list li {
-    position: absolute;
-    width: 100%;
-    max-width: 485px;
-    margin-bottom: 0.4em;
+    font-size: 1em;
   }
   #concept-flow .concept-list .engage {
     bottom: 0.4em;
@@ -6888,6 +6923,13 @@ footer .social-network-list li:first-child {
   #concept-flow .concept-list .analyze {
     bottom: 0.4em;
     margin-left: -2.8em;
+  }
+
+  #slogan .headline {
+    font-size: 40px;
+  }
+  #slogan .tagline {
+    font-size: 1.5em;
   }
 
   #engage .concept-art.engage-art {
@@ -6901,20 +6943,10 @@ footer .social-network-list li:first-child {
   #engage .concept-art.laptop-art {
     float: left;
   }
-
-  footer form.subscription-form .form-group {
-    display: inline-block;
-  }
-  footer form.subscription-form .form-control[type="email"] {
-    width: 14em;
-  }
-  footer form.subscription-form .sign-up {
-    margin-left: 0.5em;
-  }
 }
 @media (min-width: 600px) {
-  footer, section {
-    padding: 50px 30px;
+  #slogan .headline {
+    font-size: 45px;
   }
 
   .concept-article {
@@ -6922,19 +6954,11 @@ footer .social-network-list li:first-child {
   }
 
   .call-for-action {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .container {
-    width: 100%;
-  }
-
-  footer, section {
-    padding: 50px;
-  }
-
   .logo-holder {
     text-align: center;
   }
@@ -6944,86 +6968,14 @@ footer .social-network-list li:first-child {
     padding-bottom: 50px;
   }
 
-  header .site-name {
-    width: 278px;
-    height: 85px;
-    margin: 7px 0 7px 20px;
+  #slogan .headline {
+    font-size: 60px;
   }
 }
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 1024px) {
-  .container {
-    width: 1024px;
-  }
-
-  .concept-article h2 {
-    margin-top: 40px;
-  }
-
-  .call-for-action .action-statement {
-    font-size: 38px;
-  }
-
-  #landing {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-
-  #landing h2, #landing h3, #landing .tagline {
-    text-align: center;
-  }
-
-  #concepts {
-    margin-bottom: 75px;
-    margin-left: -30px;
-  }
-
-  #slogan h2 {
-    margin-top: 100px;
-    font-size: 1.8em;
-  }
-
-  .logo-holder img {
-    margin-left: -14px;
-  }
-
-  .logo-holder, section h2, section h3, section p {
-    text-align: left;
-  }
-
-  #analyze-dashboard h3 {
-    margin-top: 120px;
-  }
-
-  #analyze-dashboard {
-    min-height: 465px;
-    padding-top: 0;
-  }
-
-  #analyze-dashboard .concept-art .art {
-    margin-top: -40px;
-  }
-
-  .call-for-action {
-    text-align: left;
-  }
-  .call-for-action .action-statement, .call-for-action .action-button {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  .call-for-action .action-statement {
-    margin-bottom: 0;
-  }
-  .call-for-action .action-button {
-    float: right;
-  }
-  .call-for-action .get-in-touch {
-    margin: 0 0 0 0.6em;
-  }
-
+@media (min-width: 800px) {
   #engage .concept-art {
     position: relative;
-    height: 445px;
+    height: 345px;
   }
   #engage .concept-art.engage-art {
     width: 39%;
@@ -7056,19 +7008,77 @@ footer .social-network-list li:first-child {
     bottom: 115px;
     right: 0;
   }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .concept-article h2 {
+    margin-top: 40px;
+  }
 
-  footer form.subscription-form {
+  .logo-holder, section h2, section h3, section p {
+    text-align: left;
+  }
+
+  .logo-holder img {
+    margin-left: -14px;
+  }
+
+  #landing {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  #landing h2, #landing h3, #landing .tagline {
+    text-align: center;
+  }
+
+  #concepts {
+    margin-bottom: 75px;
+    margin-left: -30px;
+  }
+
+  #slogan h2 {
+    margin-top: 100px;
+    font-size: 1.8em;
+  }
+
+  #analyze-dashboard {
+    min-height: 465px;
+    padding-top: 0;
+  }
+  #analyze-dashboard h3 {
+    margin-top: 120px;
+  }
+  #analyze-dashboard .concept-art .art {
+    margin-top: -40px;
+  }
+
+  #engage .concept-art {
+    height: 445px;
+  }
+
+  #get-in-touch {
+    padding: 50px 40px;
+  }
+  #get-in-touch .call-for-action .get-in-touch {
+    margin: 0;
+  }
+
+  .call-for-action {
+    text-align: left;
+  }
+  .call-for-action .action-statement, .call-for-action .action-button {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .call-for-action .action-statement {
+    font-size: 38px;
     margin-bottom: 0;
   }
-  footer .copyright {
-    margin-top: 80px;
+  .call-for-action .action-button {
+    float: right;
   }
-  footer h4 {
-    margin-bottom: 1.2em;
-  }
-  footer .site-nav {
-    margin-left: 0px;
-    margin-bottom: 0;
+  .call-for-action .get-in-touch {
+    margin: 0 0 0 0.6em;
   }
 
   .demo-call, .get-demo {
@@ -7084,26 +7094,15 @@ footer .social-network-list li:first-child {
     margin-left: 1em;
   }
 }
+@media (min-width: 1024px) {
+  .container {
+    width: 1024px;
+  }
+}
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1280px) {
-  .container {
-    width: 1280px;
-  }
-
   .concept-article h2 {
     margin-top: 80px;
-  }
-
-  footer, section {
-    padding: 50px 80px;
-  }
-
-  header .site-name {
-    margin-left: 40px;
-  }
-
-  .call-for-action .action-statement {
-    font-size: 40px;
   }
 
   #slogan {
@@ -7118,6 +7117,143 @@ footer .social-network-list li:first-child {
     width: 45%;
   }
 
+  .call-for-action .action-statement {
+    font-size: 40px;
+  }
+}
+.about-us.page {
+  font-size: 22px;
+}
+.about-us.page h3, .about-us.page h4 {
+  color: #7d7d7d;
+}
+.about-us.page article {
+  margin-bottom: 3em;
+}
+.about-us.page .people {
+  margin-bottom: 2em;
+}
+.about-us.page .people:last-child {
+  margin-bottom: 0;
+}
+.about-us.page .people .people-image, .about-us.page .people h3, .about-us.page .people h4 {
+  text-align: center;
+}
+.about-us.page hr {
+  border: 0;
+  height: 1px;
+  background-color: #39c5d0;
+  width: 92%;
+  margin: 0 auto 2em;
+}
+
+@media (min-width: 768px) {
+  .about-us.page .people .people-image, .about-us.page .people h3, .about-us.page .people h4 {
+    text-align: left;
+  }
+}
+.contact.page {
+  background-color: #f1f9f8;
+}
+
+/* Extra small devices (phones, less than 768px) */
+@media screen and (min-width: 320px) {
+  footer, section {
+    padding: 15px;
+  }
+
+  footer h4 {
+    margin-bottom: 1em;
+  }
+  footer .site-nav {
+    margin-left: -15px;
+    margin-bottom: 2em;
+  }
+  footer .subscription-form {
+    margin-bottom: 2em;
+  }
+  footer .sign-up {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 480px) {
+  footer, section {
+    padding: 15px;
+  }
+
+  footer form.subscription-form .form-group {
+    display: inline-block;
+  }
+  footer form.subscription-form .form-control[type="email"] {
+    width: 14em;
+  }
+  footer form.subscription-form .sign-up {
+    margin-left: 0.5em;
+  }
+}
+@media (min-width: 600px) {
+  footer, section {
+    padding: 50px 30px;
+  }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  footer, section {
+    padding: 50px;
+  }
+
+  header .site-name {
+    width: 278px;
+    height: 85px;
+    margin: 7px 0 7px 20px;
+  }
+
+  .page {
+    padding: 30px 50px;
+  }
+  .page h1, .page h2 {
+    margin-bottom: 0.5em;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  footer form.subscription-form {
+    margin-bottom: 0;
+  }
+  footer .copyright {
+    margin-top: 80px;
+  }
+  footer h4 {
+    margin-bottom: 1.2em;
+  }
+  footer .site-nav {
+    margin-left: 0px;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    width: 1024px;
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
+
+  footer, section {
+    padding: 50px 80px;
+  }
+
+  header .site-name {
+    margin-left: 40px;
+  }
+
   footer nav.site-nav {
     margin-left: 20px;
   }
@@ -7130,25 +7266,4 @@ footer .social-network-list li:first-child {
   footer .connect-us {
     margin-left: 60px;
   }
-}
-.about-us h1, .about-us h2 {
-  color: #39c5d0;
-  text-align: center;
-}
-.about-us article {
-  float: none;
-  margin-bottom: 3em;
-}
-.about-us .people {
-  margin-bottom: 2em;
-}
-.about-us .people:last-child {
-  margin-bottom: 0;
-}
-.about-us hr {
-  border: 0;
-  height: 1px;
-  background-color: #39c5d0;
-  width: 70%;
-  margin: 0 auto 2em;
 }
