@@ -10,7 +10,7 @@ $(".contact.page .contact-form").on("submit", function(e) {
   obj["name"] = obj["firstName"] + " " + obj["lastName"];
   payload = JSON.stringify(obj);
   $.ajax({
-    url: 'https://looppulse-test.firebaseio.com/.json',
+    url: 'https://looppulse-contact.firebaseio.com/.json',
     type: 'POST',
     data: payload,
     dataType: "json",
@@ -21,4 +21,20 @@ $(".contact.page .contact-form").on("submit", function(e) {
     }
   });
   return false;
+});
+
+$(".contact.page select").each(function() {
+  var select, txt;
+  select = $(this);
+  txt = select.attr("title");
+  return select.selectBoxIt({
+    theme: "bootstrap",
+    defaultText: txt
+  });
+});
+
+$(".contact.page .required label").each(function() {
+  return $(this).attr("title", "This field is required.");
+}).tooltip({
+  'placement': 'auto right'
 });

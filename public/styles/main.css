@@ -6591,6 +6591,15 @@ section p {
   border: none;
 }
 
+.btn {
+  font-size: 20px;
+}
+
+.btn-primary.disabled, #site-nav .nav .disabled.get-in-touch, #site-nav .nav .disabled.get-in-touch, .btn-primary.disabled:hover, #site-nav .nav .disabled.get-in-touch:hover, #site-nav .nav .disabled.get-in-touch:hover, .btn-primary.disabled:focus, #site-nav .nav .disabled.get-in-touch:focus, #site-nav .nav .disabled.get-in-touch:focus, .btn-primary.disabled:active, #site-nav .nav .disabled.get-in-touch:active, #site-nav .nav .disabled.get-in-touch:active, .btn-primary.disabled.active, #site-nav .nav .disabled.active.get-in-touch, #site-nav .nav .disabled.active.get-in-touch, .btn-primary[disabled], #site-nav .nav [disabled].get-in-touch, #site-nav .nav [disabled].get-in-touch, .btn-primary[disabled]:hover, #site-nav .nav [disabled].get-in-touch:hover, #site-nav .nav [disabled].get-in-touch:hover, .btn-primary[disabled]:focus, #site-nav .nav [disabled].get-in-touch:focus, #site-nav .nav [disabled].get-in-touch:focus, .btn-primary[disabled]:active, #site-nav .nav [disabled].get-in-touch:active, #site-nav .nav [disabled].get-in-touch:active, .btn-primary[disabled].active, #site-nav .nav [disabled].active.get-in-touch, #site-nav .nav [disabled].active.get-in-touch, fieldset[disabled] .btn-primary, fieldset[disabled] #site-nav .nav .get-in-touch, #site-nav .nav fieldset[disabled] .get-in-touch, fieldset[disabled] #site-nav .nav .get-in-touch, #site-nav .nav fieldset[disabled] .get-in-touch, fieldset[disabled] .btn-primary:hover, fieldset[disabled] #site-nav .nav .get-in-touch:hover, #site-nav .nav fieldset[disabled] .get-in-touch:hover, fieldset[disabled] #site-nav .nav .get-in-touch:hover, #site-nav .nav fieldset[disabled] .get-in-touch:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] #site-nav .nav .get-in-touch:focus, #site-nav .nav fieldset[disabled] .get-in-touch:focus, fieldset[disabled] #site-nav .nav .get-in-touch:focus, #site-nav .nav fieldset[disabled] .get-in-touch:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] #site-nav .nav .get-in-touch:active, #site-nav .nav fieldset[disabled] .get-in-touch:active, fieldset[disabled] #site-nav .nav .get-in-touch:active, #site-nav .nav fieldset[disabled] .get-in-touch:active, fieldset[disabled] .btn-primary.active, fieldset[disabled] #site-nav .nav .active.get-in-touch, #site-nav .nav fieldset[disabled] .active.get-in-touch, fieldset[disabled] #site-nav .nav .active.get-in-touch, #site-nav .nav fieldset[disabled] .active.get-in-touch {
+  background-color: #33cccc;
+  border-color: #33cccc;
+}
+
 .form-control {
   font-size: 20px;
   height: auto;
@@ -6601,10 +6610,6 @@ section p {
 
 .form-horizontal .control-label {
   font-weight: normal;
-}
-
-.btn {
-  font-size: 20px;
 }
 
 body > .container {
@@ -6654,6 +6659,18 @@ header .navbar-header {
   text-align: left;
   margin: 0;
   padding: 15px;
+}
+
+.form-group.has-error input {
+  border: 1px solid #d9534f;
+}
+
+.form-group.required label:after {
+  content: "\2731";
+  color: #33cccc;
+  margin-left: 0.2em;
+  font-size: 0.6em;
+  vertical-align: super;
 }
 
 .photo, .icon-badge, .art {
@@ -7146,6 +7163,17 @@ section.alt {
   width: 92%;
   margin: 0 auto 2em;
 }
+.about-us.page a.linkedin {
+  background: url(../images/linkedin_circle_gray.png) center no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+.about-us.page a.linkedin:hover {
+  background-image: url(../images/linkedin_circle_color.png);
+}
 
 @media (min-width: 768px) {
   .about-us.page .people .people-image, .about-us.page .people h3, .about-us.page .people h4 {
@@ -7154,6 +7182,29 @@ section.alt {
 }
 .contact.page {
   background-color: #f1f9f8;
+}
+.contact.page label, .contact.page .selectboxit {
+  color: #7d7d7d;
+}
+
+.selectboxit-container * {
+  font: inherit;
+}
+.selectboxit-container .selectboxit {
+  border-radius: 0;
+  height: auto;
+  padding: 0;
+}
+.selectboxit-container .selectboxit .selectboxit-text, .selectboxit-container .selectboxit .selectboxit-arrow-container {
+  height: 100%;
+}
+
+.selectboxit-arrow-container {
+  background-color: #33cccc;
+}
+
+.selectboxit-text {
+  padding: 6px 6px 6px 1px;
 }
 
 /* Extra small devices (phones, less than 768px) */
@@ -7174,6 +7225,7 @@ section.alt {
   }
   footer .sign-up {
     margin-left: 0;
+    vertical-align: top;
   }
 }
 @media screen and (min-width: 480px) {
