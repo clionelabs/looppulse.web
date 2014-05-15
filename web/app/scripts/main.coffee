@@ -21,3 +21,13 @@ $(".contact.page .contact-form").on("submit", (e) ->
   })
   return false
 )
+$(".contact.page select").each(() ->
+  select = $(this);
+  txt = select.attr("title");
+  select.selectBoxIt({
+    theme: "bootstrap"
+    defaultText: txt
+
+  })
+)
+        
