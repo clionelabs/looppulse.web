@@ -10,7 +10,7 @@ $(".contact.page .contact-form").on("submit", (e) ->
   payload = JSON.stringify(obj)
 
   $.ajax({
-     url: 'https://looppulse-test.firebaseio.com/.json',
+     url: 'https://looppulse-contact.firebaseio.com/.json',
      type: 'POST',
      data: payload,
      dataType: "json",
@@ -30,4 +30,7 @@ $(".contact.page select").each(() ->
 
   })
 )
+$(".contact.page .required label").each(() ->
+  $(this).attr("title", "This field is required.")
+).tooltip({'placement':'auto right'}) # - optional
         

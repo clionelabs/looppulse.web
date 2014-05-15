@@ -6,7 +6,8 @@
     "modernizr": "~2.6.2",
     "jquery": "~1.11.0",
     "jquery-selectboxit": "~3.8.1",
-    "jquery-ui": "~1.10.4"
+    "jquery-ui": "~1.10.4",
+    "bootstrap-validator": "~0.3.0"
   },
   "devDependencies": {}
 }

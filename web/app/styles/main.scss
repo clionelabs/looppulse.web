@@ -100,6 +100,14 @@ section {
     border: none;
   }
 }
+.btn {
+    font-size: $base-font-size;
+}
+.btn-primary.disabled, #site-nav .nav .disabled.get-in-touch, .btn-primary.disabled:hover, #site-nav .nav .disabled.get-in-touch:hover, .btn-primary.disabled:focus, #site-nav .nav .disabled.get-in-touch:focus, .btn-primary.disabled:active, #site-nav .nav .disabled.get-in-touch:active, .btn-primary.disabled.active, #site-nav .nav .disabled.active.get-in-touch, .btn-primary[disabled], #site-nav .nav [disabled].get-in-touch, .btn-primary[disabled]:hover, #site-nav .nav [disabled].get-in-touch:hover, .btn-primary[disabled]:focus, #site-nav .nav [disabled].get-in-touch:focus, .btn-primary[disabled]:active, #site-nav .nav [disabled].get-in-touch:active, .btn-primary[disabled].active, #site-nav .nav [disabled].active.get-in-touch, fieldset[disabled] .btn-primary, fieldset[disabled] #site-nav .nav .get-in-touch, #site-nav .nav fieldset[disabled] .get-in-touch, fieldset[disabled] .btn-primary:hover, fieldset[disabled] #site-nav .nav .get-in-touch:hover, #site-nav .nav fieldset[disabled] .get-in-touch:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] #site-nav .nav .get-in-touch:focus, #site-nav .nav fieldset[disabled] .get-in-touch:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] #site-nav .nav .get-in-touch:active, #site-nav .nav fieldset[disabled] .get-in-touch:active, fieldset[disabled] .btn-primary.active, fieldset[disabled] #site-nav .nav .active.get-in-touch, #site-nav .nav fieldset[disabled] .active.get-in-touch {
+    background-color: $button-bg;
+    border-color: $button-bg;
+}
+
 .form-control {
     font-size: $base-font-size;
     height: auto;
@@ -110,16 +118,13 @@ section {
 .form-horizontal .control-label {
     font-weight: normal;
 }
-.btn {
-    font-size: $base-font-size;
-}
-
 body > .container {
     padding: 0;
 }
 .col-wrap {
     margin: 0 -15px;
 }
+
 // Bootstrap override in specific part
 header .container-fluid {
     padding: 0;
@@ -158,7 +163,20 @@ header .navbar-header {
         }
     }
 }
+.form-group.has-error input {
+    border:1px solid #d9534f;
+}
+.form-group.required {
+    label:after {
+        content: "\2731";
+        color: $link-hover;
+        margin-left: 0.2em;
+        font-size: 0.6em;
+        vertical-align: super;
+    }
 
+
+}
 
 // Common Class
 .photo, .icon-badge, .art {
