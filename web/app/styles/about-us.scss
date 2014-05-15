@@ -22,7 +22,17 @@
         margin: 0 auto 2em;
     }
 
-
+    a.linkedin {
+        background: url(../images/linkedin_circle_gray.png) center no-repeat;
+        background-size: cover;
+        display:inline-block;
+        width: 32px;
+        height:32px;
+        vertical-align: middle;
+        &:hover {
+            background-image: url(../images/linkedin_circle_color.png);
+        }
+    }
 }
 
 @media (min-width: $screen-sm-min) { 
