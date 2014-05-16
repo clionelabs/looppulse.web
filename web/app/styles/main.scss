@@ -120,6 +120,7 @@ section {
 }
 body > .container {
     padding: 0;
+    overflow-x: hidden; 
 }
 .col-wrap {
     margin: 0 -15px;
@@ -149,7 +150,7 @@ header .navbar-header {
         background-color: $link-normal;
     }
 }
-#main-navbar-collapse.navbar-collapse.in { 
+#main-navbar-collapse.collapse-visible.navbar-collapse { 
     margin: 0;
     padding: 0;
     .nav.navbar-nav {

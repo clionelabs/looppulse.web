@@ -67,7 +67,10 @@ if $("main.index").size() > 0
   
   #notify("Welcome", "info");
 
-
+$('.navbar-collapse').on('show.bs.collapse', () -> 
+  console.log("Helping")
+  $(this).addClass('collapse-visible')
+)
 
 
 
