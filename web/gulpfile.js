@@ -5,7 +5,12 @@ var gulp = require('gulp');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
-var root = path.join(__dirname, '../');
+var web_root = path.join(__dirname, '../'); // /clionelab/looppulse.web
+var root = path.join(web_root, '../'); // /clionelab/
+var www_dir = './looppulse.github.io/' // www dir that is related to root 
+var www_root = path.join(root, www_dir)
+$.util.log("Root:", root);
+$.util.log("WWW Root:", www_root)
 
 gulp.task('styles', function () {
     return gulp.src('app/styles/main.scss')
@@ -24,13 +29,13 @@ gulp.task('copy', function(){
         p.dirname = p.dirname.replace(/^dist\//, './')
         p.dirname = p.dirname.replace(/^dist/, './')
     }))
-    .pipe(gulp.dest('public', { cwd: root }))
-    .pipe($.size())
+    .pipe(gulp.dest('./', { cwd: www_root }))
+    .pipe($.size({showFiles:true}))
 });
 
 gulp.task('templates', function(){
     gulp.src(["./app/templates/*.mustache","!./app/templates/_*.mustache"])
-        .pipe($.debug())
+        //.pipe($.debug())
         .pipe($.mustachePlus({
             /* variable */
         },{
@@ -40,7 +45,7 @@ gulp.task('templates', function(){
             footer: "app/templates/_footer.mustache"
         }))
         .pipe(gulp.dest("./app"))
-        .pipe($.debug())
+        //.pipe($.debug())
         .pipe($.size())
 })
 
