@@ -1,13 +1,13 @@
 parseQueryString = ( queryString = "" ) ->
     params = {}
- 
+
     # Split into key/value pairs
     queries = queryString.split("&");
- 
-    for q in queries 
+
+    for q in queries
         temp = q.split('=');
         params[temp[0]] = temp[1];
- 
+
     return params;
 
 notify = (msg, klass) ->
@@ -39,7 +39,7 @@ if $(".contact.page").size() > 0
           notify("Failed to send the contact form. Please retry later", "error");
        error: (data) ->
         notify("Failed to send the contact form. Please retry later", "error");
-       
+
     })
     return false
   )
@@ -63,15 +63,10 @@ if $("main.index").size() > 0
 
   params = parseQueryString(queryString)
   if (params?.contact_form_submit == "SUCCESS")
-    notify("Contact form sent", "success");
+    notify("Thanks for the message. Our team will get back to you shortly.", "success");
   
   #notify("Welcome", "info");
 
-$('.navbar-collapse').on('show.bs.collapse', () -> 
+$('.navbar-collapse').on('show.bs.collapse', () ->
   $(this).addClass('collapse-visible')
 )
-
-
-
-
-        
