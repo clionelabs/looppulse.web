@@ -28,7 +28,7 @@
         display:inline-block;
         width: 32px;
         height:32px;
-        vertical-align: middle;
+        vertical-align: top; //height of the h3 is 34px
         &:hover {
             background-image: url(../images/linkedin_circle_color.png);
         }
