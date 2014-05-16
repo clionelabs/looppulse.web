@@ -15,6 +15,8 @@ notify = (msg, klass) ->
   note = $("<div id=\"top-note\" class=\"alert alert-#{klass}\"><span class=\"msg\">#{msg}</span></div>")
   note.prependTo($("body"))
 
+
+
 if $(".contact.page").size() > 0
   $(".contact.page .contact-form").on("submit", (e) ->
     e.preventDefault();
@@ -67,6 +69,4 @@ if $("main.index").size() > 0
   
   #notify("Welcome", "info");
 
-$('.navbar-collapse').on('show.bs.collapse', () ->
-  $(this).addClass('collapse-visible')
-)
+
