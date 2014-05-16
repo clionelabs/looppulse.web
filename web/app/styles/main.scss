@@ -294,6 +294,44 @@ footer {
     }
 }
 
+// Component 
+#top-note {
+    position: absolute;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    right: 0;
+    // background: #fde073;
+    text-align: center;
+    // line-height: 2.5;
+    overflow: hidden; 
+    -webkit-box-shadow: 0 0 5px black;
+    -moz-box-shadow:    0 0 5px black;
+    box-shadow:         0 0 5px black;
+    border:none;
+    border-radius: 0;
+    padding: 0.2em;
+    font-size: smaller;
+}
+@-webkit-keyframes slideDown {
+    0%, 100% { -webkit-transform: translateY(-50px); }
+    10%, 90% { -webkit-transform: translateY(0px); }
+}
+@-moz-keyframes slideDown {
+    0%, 100% { -moz-transform: translateY(-50px); }
+    10%, 90% { -moz-transform: translateY(0px); }
+}
+@-keyframes slideDown {
+    0%, 100% { transform: translateY(-50px); }
+    10%, 90% { transform: translateY(0px); }
+}
+.cssanimations.csstransforms #top-note {
+    -moz-transform:    translateY(-50px);
+    -moz-animation:    slideDown 5s 1.5s 1 ease forwards;
+    transform:    translateY(-50px);
+    animation:    slideDown 5s 1.5s 1 ease forwards;
+}
+
 @import "./index";
 @import "./about-us";
 @import "./contact";

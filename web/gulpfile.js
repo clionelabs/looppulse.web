@@ -13,7 +13,7 @@ gulp.task('styles', function () {
             style: 'expanded',
             precision: 10
         }))
-        .pipe($.autoprefixer('last 1 version'))
+        .pipe($.autoprefixer(["last 1 version", "> 1%", "ie 8"], { cascade: true }))
         .pipe(gulp.dest('.tmp/styles'))
         .pipe($.size());
 });

@@ -1,36 +1,75 @@
-$(".contact.page .contact-form").on("submit", (e) ->
-  e.preventDefault();
-  entities = $(e.target).serializeArray()
-  obj = {}
-  for entry in entities
-    obj[entry["name"]] = entry["value"]
+parseQueryString = ( queryString = "" ) ->
+    params = {}
+ 
+    # Split into key/value pairs
+    queries = queryString.split("&");
+ 
+    for q in queries 
+        temp = q.split('=');
+        params[temp[0]] = temp[1];
+ 
+    return params;
 
-  obj["name"] = obj["firstName"] + " " + obj["lastName"]
+notify = (msg, klass) ->
+  $('#top-note').remove()
+  note = $("<div id=\"top-note\" class=\"alert alert-#{klass}\"><span class=\"msg\">#{msg}</span></div>")
+  note.prependTo($("body"))
 
-  payload = JSON.stringify(obj)
+if $(".contact.page").size() > 0
+  $(".contact.page .contact-form").on("submit", (e) ->
+    e.preventDefault();
+    entities = $(e.target).serializeArray()
+    obj = {}
+    for entry in entities
+      obj[entry["name"]] = entry["value"]
 
-  $.ajax({
-     url: 'https://looppulse-contact.firebaseio.com/.json',
-     type: 'POST',
-     data: payload,
-     dataType: "json",
-     success: (data) ->
-       if(data.name)
-        alert("Success")
-     
-  })
-  return false
-)
-$(".contact.page select").each(() ->
-  select = $(this);
-  txt = select.attr("title");
-  select.selectBoxIt({
-    theme: "bootstrap"
-    defaultText: txt
+    obj["name"] = obj["firstName"] + " " + obj["lastName"]
 
-  })
-)
-$(".contact.page .required label").each(() ->
-  $(this).attr("title", "This field is required.")
-).tooltip({'placement':'auto right'}) # - optional
+    payload = JSON.stringify(obj)
+
+    $.ajax({
+       url: 'https://looppulse-contact.firebaseio.com/.json',
+       type: 'POST',
+       data: payload,
+       dataType: "json",
+       success: (data) ->
+         if(data.name)
+          window.location = "index.html?contact_form_submit=SUCCESS"
+         else
+          notify("Failed to send the contact form. Please retry later", "error");
+       error: (data) ->
+        notify("Failed to send the contact form. Please retry later", "error");
+       
+    })
+    return false
+  )
+  $(".contact.page select").each(() ->
+    select = $(this);
+    txt = select.attr("title");
+    select.selectBoxIt({
+      theme: "bootstrap"
+      defaultText: txt
+
+    })
+  )
+
+  $(".contact.page .required label").each(() ->
+    $(this).attr("title", "This field is required.")
+  ).tooltip({'placement':'auto right'}) # - optional
+
+if $("main.index").size() > 0
+  queryString = window.location.search
+  queryString = queryString.substring(1)
+
+  params = parseQueryString(queryString)
+  if (params?.contact_form_submit == "SUCCESS")
+    notify("Contact form sent", "success");
+  
+  #notify("Welcome", "info");
+
+
+
+
+
+
         
