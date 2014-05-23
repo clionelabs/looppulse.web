@@ -75,17 +75,17 @@ $landing-flow-max-width: 485px;
         .collect {
             top: 0;
             text-align: center;
+            text-indent: 0.3em;
         }
         .engage {
             bottom: 0em;
-            //left: 3em;
-            left:1.5em;
+            left:1.7em; //1.5em
             text-align: left;
         }
         .analyze {
             bottom: 0em;
             left: 0;
-            margin-left: -1.5em; //3em
+            margin-left: -1.3em; //3em
 
             text-align: right;
         }
@@ -103,7 +103,7 @@ $landing-flow-max-width: 485px;
 
 }
 #analyze-dashboard {
-    background: url(../images/dashboard_bg.png) bottom center no-repeat;
+    background: #134848 url(../images/dashboard_bg.png) bottom center no-repeat;
     padding-bottom: 0;
     
     h3 {
@@ -193,11 +193,11 @@ $landing-flow-max-width: 485px;
             li { font-size: 1em; }
             .engage {
                 bottom: 0.4em;
-                left: 3em;
+                left: 2.8em;
             }
             .analyze {
                 bottom: 0.4em;
-                margin-left: -2.8em;
+                margin-left: -2.4em;
             }
         }
     }
@@ -410,5 +410,5 @@ $landing-flow-max-width: 485px;
 }
 
 @media screen and (max-width: 640px) {
-    // #landing { background-image: none; }
+    #landing { background-image: none; }
 }
