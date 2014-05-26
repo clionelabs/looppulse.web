@@ -120,7 +120,7 @@ section {
 }
 body > .container {
     padding: 0;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 .col-wrap {
     margin: 0 -15px;
@@ -149,7 +149,7 @@ header .navbar-header {
         background-color: $link-normal;
     }
 }
-#main-navbar-collapse.collapse-visible.navbar-collapse { 
+#main-navbar-collapse.collapse-visible.navbar-collapse {
     margin: 0;
     padding: 0;
     .nav.navbar-nav {
@@ -229,15 +229,12 @@ header {
             letter-spacing: 0.2em;
             white-space: nowrap;
         }
-        a .loop {
+        a .logo-text {
             color: #017f7f;
-        }
-        a .pulse {
-            color: #65c9c9;
         }
     }
 }
-// Main Nav 
+// Main Nav
 #site-nav {
     border-radius: 0;
     margin-bottom: 0;
@@ -246,7 +243,7 @@ header {
         font-size: 1em;
         margin-top: 1.4em;
         margin-right: 1em;
-        & > li > a {   
+        & > li > a {
           color: $link-normal;
           &:hover, &:active, &:focus {
             color: $link-hover;
@@ -285,7 +282,7 @@ footer {
         margin-bottom:1.2em;
     }
 
-    // i. Nav 
+    // i. Nav
     .nav {
         font-size: 1.2em;
     }
@@ -310,7 +307,7 @@ footer {
     }
 }
 
-// Component 
+// Component
 #top-note {
     position: absolute;
     z-index: 101;
@@ -320,7 +317,7 @@ footer {
     // background: #fde073;
     text-align: center;
     // line-height: 2.5;
-    overflow: hidden; 
+    overflow: hidden;
     -webkit-box-shadow: 0 0 5px black;
     -moz-box-shadow:    0 0 5px black;
     box-shadow:         0 0 5px black;
@@ -437,7 +434,7 @@ footer {
 }
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: $screen-sm-min) { 
+@media (min-width: $screen-sm-min) {
     .container {
         width: 100%;
     }
@@ -449,9 +446,9 @@ footer {
         height: 85px;
         margin-left: 0;
     }
-    .page { 
-        padding: 30px 50px; 
-        
+    .page {
+        padding: 30px 50px;
+
         h1,h2 {
             margin-bottom: 0.5em;
         }
@@ -459,7 +456,7 @@ footer {
 
 }
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: $screen-md-min) { 
+@media (min-width: $screen-md-min) {
     header .site-name {
         margin-left: 20px;
     }
@@ -482,19 +479,19 @@ footer {
         }
     }
 }
-@media (min-width: 1024px) { 
+@media (min-width: 1024px) {
     .container {
         width: 1024px;
     }
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1280px) { 
+@media (min-width: 1280px) {
     // Basic
     .container {
       width: 1280px;
     }
-    footer, section { 
+    footer, section {
         padding: 50px 80px;
     }
     header .site-name {
@@ -522,7 +519,7 @@ footer {
     header .site-name {
         margin-left: 15px;
         .navbar-brand {
-            font-size: 14px;
+            font-size: 20px;
             line-height: normal;
             padding-left: 63px;
             letter-spacing: 0.25em;
