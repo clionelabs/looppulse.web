@@ -146,7 +146,6 @@ header .navbar-header {
         height:3px;
     }
     &:hover .icon-bar {
-
         background-color: $link-normal;
     }
 }
@@ -211,15 +210,31 @@ header {
     background-color: $header-color;
     .site-name {
         display: inline-block;
-        @extend .text-hide;
+        //@extend .text-hide;
 
         background: url("../images/logo.png") left center no-repeat;
         background-size: contain;
         background-repeat: no-repeat;
-        max-width: 278px;
+        max-width: 300px;
         width:60%;
         height: auto;
-        margin: 7px 0 0 7px
+        margin: 10px 0 7px 10px;
+        .navbar-brand {
+            font-family: sans-serif;
+            color: #134848;
+            font-size:26px;
+            font-weight: 100;
+            line-height: 2;
+            padding-left: 120px;
+            letter-spacing: 0.2em;
+            white-space: nowrap;
+        }
+        a .loop {
+            color: #017f7f;
+        }
+        a .pulse {
+            color: #65c9c9;
+        }
     }
 }
 // Main Nav 
@@ -372,6 +387,7 @@ footer {
 
 /* Extra small devices (phones, less than 768px) */
 @media screen and (min-width: 320px) {
+
     footer, section {
         padding: 15px;
     }
@@ -429,9 +445,9 @@ footer {
         padding: 50px;
     }
     header .site-name {
-        width: 278px;
+        width: 280px;
         height: 85px;
-        margin: 7px 0 7px 20px; //-30 because of navbar etc
+        margin-left: 0;
     }
     .page { 
         padding: 30px 50px; 
@@ -444,6 +460,9 @@ footer {
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: $screen-md-min) { 
+    header .site-name {
+        margin-left: 20px;
+    }
     // Footer
     footer {
         form.subscription-form {
@@ -453,7 +472,6 @@ footer {
         .copyright {
             margin-top: 80px;
         }
-
 
         h4 {
             margin-bottom: 1.2em;
@@ -496,6 +514,18 @@ footer {
         }
         .connect-us {
             margin-left: 60px;
+        }
+    }
+}
+@media (max-width: 767px) {
+
+    header .site-name {
+        margin-left: 15px;
+        .navbar-brand {
+            font-size: 14px;
+            line-height: normal;
+            padding-left: 63px;
+            letter-spacing: 0.25em;
         }
     }
 }
