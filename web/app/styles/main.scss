@@ -218,7 +218,7 @@ header {
         max-width: 300px;
         width:60%;
         height: auto;
-        margin: 10px 0 7px 10px;
+        margin: 10px 0 5px 10px;
         .navbar-brand {
             font-family: sans-serif;
             color: #134848;
@@ -484,6 +484,11 @@ footer {
         width: 1024px;
     }
 }
+@media (min-width: $screen-lg-min) {
+    #site-nav .nav {
+        margin-right: 1.5em;
+    }
+}
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1280px) {
@@ -524,5 +529,10 @@ footer {
             padding-left: 63px;
             letter-spacing: 0.25em;
         }
+    }
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+    #site-nav .nav {
+            margin-right: 0em;
     }
 }
