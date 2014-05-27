@@ -77,17 +77,16 @@ $landing-flow-max-width: 485px;
             text-align: center;
             text-indent: 0.3em;
         }
-        .engage {
+        .engage, .analyze {
             bottom: 0em;
-            left:1.7em; //1.5em
-            text-align: left;
+            text-align: center;
+        }
+        .engage {
+            right: 26%;
         }
         .analyze {
-            bottom: 0em;
-            left: 0;
-            margin-left: -1.3em; //3em
-
-            text-align: right;
+            
+            left: 27%;
         }
     }
     .art {
@@ -191,13 +190,9 @@ $landing-flow-max-width: 485px;
     #concept-flow {
         .concept-list {
             li { font-size: 1em; }
-            .engage {
-                bottom: 0.4em;
-                left: 2.8em;
-            }
+            .engage,
             .analyze {
                 bottom: 0.4em;
-                margin-left: -2.4em;
             }
         }
     }
