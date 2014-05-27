@@ -120,7 +120,7 @@ section {
 }
 body > .container {
     padding: 0;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 .col-wrap {
     margin: 0 -15px;
@@ -136,7 +136,7 @@ header .navbar-header {
 .navbar .navbar-toggle {
     margin-right: 15px;
     padding: 9px 10px;
-    margin-top: 14px;
+    margin-top: 19px;
     margin-bottom: 8px;
     border: none;
     border-radius: 0;
@@ -146,11 +146,10 @@ header .navbar-header {
         height:3px;
     }
     &:hover .icon-bar {
-
         background-color: $link-normal;
     }
 }
-#main-navbar-collapse.collapse-visible.navbar-collapse { 
+#main-navbar-collapse.collapse-visible.navbar-collapse {
     margin: 0;
     padding: 0;
     .nav.navbar-nav {
@@ -211,18 +210,31 @@ header {
     background-color: $header-color;
     .site-name {
         display: inline-block;
-        @extend .text-hide;
-
+        //@extend .text-hide;
+        font-family: 'Open Sans', sans-serif;
         background: url("../images/logo.png") left center no-repeat;
         background-size: contain;
         background-repeat: no-repeat;
-        max-width: 278px;
+        max-width: 300px;
         width:60%;
         height: auto;
-        margin: 7px 0 0 7px
+        margin: 10px 0 5px 10px;
+        .navbar-brand {
+            font-family: sans-serif;
+            color: #134848;
+            font-size:26px;
+            font-weight: 100;
+            line-height: 2;
+            padding-left: 120px;
+            letter-spacing: 0.2em;
+            white-space: nowrap;
+        }
+        a .logo-text {
+            color: #017f7f;
+        }
     }
 }
-// Main Nav 
+// Main Nav
 #site-nav {
     border-radius: 0;
     margin-bottom: 0;
@@ -231,7 +243,7 @@ header {
         font-size: 1em;
         margin-top: 1.4em;
         margin-right: 1em;
-        & > li > a {   
+        & > li > a {
           color: $link-normal;
           &:hover, &:active, &:focus {
             color: $link-hover;
@@ -270,7 +282,7 @@ footer {
         margin-bottom:1.2em;
     }
 
-    // i. Nav 
+    // i. Nav
     .nav {
         font-size: 1.2em;
     }
@@ -295,7 +307,7 @@ footer {
     }
 }
 
-// Component 
+// Component
 #top-note {
     position: absolute;
     z-index: 101;
@@ -305,7 +317,7 @@ footer {
     // background: #fde073;
     text-align: center;
     // line-height: 2.5;
-    overflow: hidden; 
+    overflow: hidden;
     -webkit-box-shadow: 0 0 5px black;
     -moz-box-shadow:    0 0 5px black;
     box-shadow:         0 0 5px black;
@@ -372,6 +384,7 @@ footer {
 
 /* Extra small devices (phones, less than 768px) */
 @media screen and (min-width: 320px) {
+
     footer, section {
         padding: 15px;
     }
@@ -421,7 +434,7 @@ footer {
 }
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: $screen-sm-min) { 
+@media (min-width: $screen-sm-min) {
     .container {
         width: 100%;
     }
@@ -429,13 +442,13 @@ footer {
         padding: 50px;
     }
     header .site-name {
-        width: 278px;
+        width: 280px;
         height: 85px;
-        margin: 7px 0 7px 20px; //-30 because of navbar etc
+        margin-left: 0;
     }
-    .page { 
-        padding: 30px 50px; 
-        
+    .page {
+        padding: 30px 50px;
+
         h1,h2 {
             margin-bottom: 0.5em;
         }
@@ -443,7 +456,10 @@ footer {
 
 }
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: $screen-md-min) { 
+@media (min-width: $screen-md-min) {
+    header .site-name {
+        margin-left: 20px;
+    }
     // Footer
     footer {
         form.subscription-form {
@@ -454,7 +470,6 @@ footer {
             margin-top: 80px;
         }
 
-
         h4 {
             margin-bottom: 1.2em;
         }
@@ -464,19 +479,24 @@ footer {
         }
     }
 }
-@media (min-width: 1024px) { 
+@media (min-width: 1024px) {
     .container {
         width: 1024px;
     }
 }
+@media (min-width: $screen-lg-min) {
+    #site-nav .nav {
+        margin-right: 1.5em;
+    }
+}
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1280px) { 
+@media (min-width: 1280px) {
     // Basic
     .container {
       width: 1280px;
     }
-    footer, section { 
+    footer, section {
         padding: 50px 80px;
     }
     header .site-name {
@@ -497,5 +517,22 @@ footer {
         .connect-us {
             margin-left: 60px;
         }
+    }
+}
+@media (max-width: 767px) {
+
+    header .site-name {
+        margin-left: 15px;
+        .navbar-brand {
+            font-size: 20px;
+            line-height: normal;
+            padding-left: 63px;
+            letter-spacing: 0.25em;
+        }
+    }
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+    #site-nav .nav {
+            margin-right: 0em;
     }
 }
