@@ -1,0 +1,409 @@
+
+
+
+/// Sections
+
+
+
+/// Section 
+// Common
+section {
+    background-color:  $primary-color;
+    color: $text-color;
+    padding: 50px 88px;
+    &.alt {
+        background-color: $alt-color;
+        color: $alt-text-color;
+    }
+}
+
+.concept-article h2 {
+    margin-top: 80px;
+}
+
+// Specific Section
+$landing-flow-max-width: 485px;
+// 1. Landing
+#landing {
+    background: #134848 url(../images/landing_bg.png) top left no-repeat;
+    background-size: cover;
+    color: $alt-text-color;
+
+}
+#slogan {
+    text-align: center;
+    &, h2 { font-family: 'PT Sans Narrow', sans-serif; }
+    h2 { font-size: 1em; margin-top: 0em; font-weight: bold; }
+
+    .headline {
+        font-size: 1.3em;
+        text-shadow: 1px 1px 3px rgba(0,0,0, 0.25);
+        .upper { 
+            letter-spacing: 0.08em
+        }
+        .lower{
+            letter-spacing: normal
+        }
+    }
+    .tagline { font-size: 1em; }
+}
+#concepts {
+    position:relative;
+    padding:0;
+    font-size: 1.4em;
+}
+#concept-flow {
+    width: 100%;
+    max-width: $landing-flow-max-width;
+    height: auto;
+    max-height: 450px;
+    overflow:hidden;
+    margin:0 auto;
+    position:relative;
+
+    .concept-list {
+        list-style:none;
+        padding: 0;
+        li {
+            position: absolute;
+            width: 100%;
+            max-width: $landing-flow-max-width;
+            margin-bottom:0.2em;
+            font-size: 0.9em;
+            text-shadow: 1px 1px 2px rgba(0,0,0, 0.2);
+        }
+        .collect {
+            top: 0;
+            text-align: center;
+            text-indent: 0.3em;
+        }
+        .engage, .analyze {
+            bottom: 0em;
+            text-align: center;
+        }
+        .engage {
+            right: 26%;
+        }
+        .analyze {
+            
+            left: 27%;
+        }
+    }
+    .art {
+        margin-top: 0.9em;
+        margin-bottom: -0.4em;
+        //margin-bottom: -1.4em;
+    }
+}
+
+// 2. Collect
+// 3. Analyze & Dashboard
+#analyze {
+
+}
+#analyze-dashboard {
+    background: url(../images/dashboard_bg.png) bottom center no-repeat;
+    padding-bottom: 0;
+    
+    h3 {
+        color: $em-text-color;
+        margin-bottom: 0.4em;
+        margin-top: 120px; 
+        letter-spacing: 0.05em;
+    }
+    .concept-art .art {
+        margin-top:-40px;
+    }
+}
+
+// 4. Engage
+
+
+
+// Some Override
+
+
+.logo-holder, section h2, section h3, section p {
+    text-align: center;
+}
+
+
+.concept-article {
+    margin-bottom: 30px;
+    h2 {
+        margin-top: 0px;
+    }
+}
+
+
+// Media Queries
+// General Flow:
+// - section common component (essential)
+// - section specific
+// - common component (optional)
+// - specific component
+
+/* Extra small devices (phones, less than 768px) */
+@media screen and (min-width: 320px) {
+    // Section
+    #landing {
+        padding: 10px;
+        padding-bottom: 10px;
+    }
+
+
+    #analyze-dashboard { 
+        background-size: cover;
+        h3 {
+            margin-top: 20px;
+        }
+        .concept-art .art {
+            margin-top: 0px;
+        }
+    }
+
+    #engage {
+        .concept-art {
+            &.plane-art {
+                transform: translate(-15%, -60px) rotate(-45deg);
+            }
+        }
+    }
+
+    // Component
+    .call-for-action {
+        text-align: center;
+        .action-statement, .action-button { display: block; }
+        .action-statement { margin-bottom: 1em; }
+        .get-in-touch { margin: 0 auto; }
+    }
+
+}
+
+@media screen and (min-width: 480px) {
+
+    // Section
+    #landing {
+        padding: 10px;
+    }
+
+    #concept-flow {
+        .concept-list {
+            li { font-size: 1em; }
+            .engage,
+            .analyze {
+                bottom: 0.4em;
+            }
+        }
+    }
+    #slogan {
+        .headline { font-size: 40px; }
+        .tagline { font-size: 1.5em; }
+    }
+    #engage {
+        .concept-art {
+            &.engage-art {
+                float: right;
+            }
+            &.plane-art {
+                transform: translate(15%, -60px) rotate(-30deg);
+                float: left;
+            }
+            &.laptop-art {
+                float: left;
+            }
+        }
+    }
+}
+@media (min-width: 600px) {
+    #slogan {
+        .headline { font-size: 45px; }
+    }
+    .concept-article {
+        margin-bottom: 50px;
+    }
+    .call-for-action {
+        font-size: 1.3em; //28px
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) { 
+
+    // Section Common
+    .logo-holder {
+        text-align: center;
+    }
+    // Section
+    #landing {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    #slogan {
+        .headline { font-size: 60px; }
+    }
+
+}
+@media (min-width: 800px) {
+    // Section
+    #engage {
+        .concept-art {
+            position:relative;
+            height: 345px;
+
+            &.engage-art {
+                width: 39%;
+                float: right;
+            }
+            &.plane-art {
+                transform:  none;
+                width: 22%;
+                padding: 0;
+                float: right;
+            }
+            &.laptop-art {
+                width: 39%;
+                float: right;
+            }
+
+            .art {
+                position:absolute;
+                max-height: 100%;
+                &[alt="engage"] { 
+                    bottom:0;
+                    left: -40px; 
+
+                }
+                &[alt="laptop"] { 
+                    right: 0px; 
+                    bottom:0;
+                }
+                &[alt="plane"] {
+                    bottom: 115px;
+                    right:0;
+                }
+            }
+
+        }
+    }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) { 
+    // Section Common
+    .concept-article h2 {
+        margin-top: 40px;
+    }
+    .logo-holder, section h2, section h3, section p {
+        text-align: left;
+    }
+    .logo-holder img {
+        margin-left: -14px;
+    }
+    // Section
+    #landing {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        h2, h3, .tagline {
+            text-align: center;
+        }
+    }
+    #concepts {
+        margin-bottom: 75px;
+        margin-left: -30px;
+    }
+
+    #slogan {
+        h2 {
+            margin-top: 100px;
+            font-size: 1.8em;
+        }
+    }
+
+    #analyze-dashboard {
+        min-height: 465px;
+        padding-top: 0;
+        h3 {
+            margin-top: 120px;
+        }
+        .concept-art .art {
+            margin-top: -40px;
+        }
+    }
+
+
+    #engage {
+        .concept-art {
+            height: 445px;
+        }
+    }
+
+    #get-in-touch {
+        padding: 50px 40px;
+        .call-for-action .get-in-touch {
+            margin: 0;
+        }
+    }
+
+    // Components
+    .call-for-action {    
+        text-align: left;
+        .action-statement, .action-button { 
+            display: inline-block; 
+            vertical-align: middle; 
+        }
+        .action-statement { 
+            font-size: 38px;
+            margin-bottom: 0; 
+        }
+        .action-button { float: right; }
+        .get-in-touch {
+            margin: 0 0 0 0.6em;
+        }
+    }
+
+    .demo-call,.get-demo {
+        vertical-align: middle;
+    }
+    .demo-call {
+        line-height: 1.4;
+    }
+    .get-demo {
+        font-size: 0.8em;
+        margin-left: 1em;
+    }
+
+}
+@media (min-width: 1024px) { 
+    .container {
+        width: 1024px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1280px) { 
+    // Section Common
+    .concept-article h2 {
+        margin-top: 80px;
+    }
+
+    // Section
+    #slogan {
+        width: 55%;
+        h2 {
+            margin-top: 140px;
+            font-size: 2.6em;
+        }
+    }
+    #concepts{
+        width: 45%;
+    }
+
+    // Component
+    .call-for-action  .action-statement {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #landing { background-image: none; }
+}

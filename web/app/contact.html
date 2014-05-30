@@ -67,107 +67,96 @@
         </nav>
       </header>
 
-
-      <main class="index">
-        <section class="landing" id="landing">
-          <div class="row">
-            <div id="concepts"  class="col-md-6">
-              <div id="concept-flow">
-                <ul class="concept-list">
-                  <li class="concept collect">Collect</li>
-                  <li class="concept analyze">Analyze</li>
-                  <li class="concept engage">Engage</li>
-                </ul>
-                <img src="images/landing_flow3.png" class="art">
+      <main class="contact page">
+        <div class="row">
+          <div class="col-md-7 center-block" id="contact">
+            <h1>Get In Touch</h1>
+            <form class="form-horizontal contact-form" role="form"  data-toggle="validator">
+              <div class="form-group required">
+                <label for="name" class="col-sm-4 control-label">Name</label>
+                <div class="col-sm-8">
+                  <div class="col-wrap">
+                    <div class="col-xs-6">
+                      <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
+                    </div>
+                    <div class="col-xs-6">
+                      <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div id="slogan" class="col-md-6">
-                  <h2 class="headline"><span class="upper">RE-ENGAGE & CONVERT</span><br> <span class="lower">YOUR MISSED OPPORTUNITIES</span></h2>
-            </div>
-          </div>
-        </section>
+              <div class="form-group">
+                <label for="jobTitle" class="col-sm-4 control-label">Job Title</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="jobTitle" name="jobTitle" placeholder="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="companyName" class="col-sm-4 control-label">Company Name</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="companyName"  name="companyName" placeholder="">
+                </div>
+              </div>
 
-        <section class="alt" id="collect">
-          <div class="row">
-            <div class="logo-holder col-md-4">
-              <img src="images/collect_logo_big.png" class="icon-badge">
-            </div>
-            <article class="concept-article col-md-8">
-              <h2 >
-                Collect
-              </h2>
-              <p>We deploy and configure beacons based on your business objectives.
-                 These beacons work with both iOS and Android devices and seamlessly collect behavioral data of your in-store visitors.
-              </p>
-            </article>
-          </div>
-          <div class="concept-art">
-            <img src="images/collect_photo.png" class="photo">
-          </div>
-        </section>
+              <div class="form-group">
+                <label for="companyType" class="col-sm-4 control-label">Company Type</label>
+                <div class="col-sm-8">
+                  <select class="form-control" id="companyType"  name="companyType" title="Select a company type">
+                      <option value="">Select a company type:</option>
+                      <option value="Retail Shops">Retail Shops</option>
+                      <option value="Shopping Malls">Shopping Malls</option>
+                      <option value="Restaurants">Restaurants</option>
+                      <option value="Hotels">Hotels</option>
+                      <option value="Trade Shows">Trade Shows</option>
+                      <option value="Others">Others</option>
+                  </select>
+                </div>
+              </div>
 
-        <section class="" id="analyze">
-          <div class="row">
-            <div class="logo-holder col-md-4">
-              <img src="images/analyze_logo_big.png" class="icon-badge">
-            </div>
-            <article class="concept-article col-md-8">
-              <h2>
-                Analyze
-              </h2>
-              <p>
-                The data we collected with beacons help you understand and identify your missed opportunites: Which visitors left without purchase? What insights can you learn about their visits?
-              </p>
-            </article>
-          </div>
-        </section>
+              <div class="form-group">
+                <label for="region" class="col-sm-4 control-label">Region</label>
+                <div class="col-sm-8">
+                  <select class="form-control" id="region"  name="region" title="Select a region">
+                    <option value="">Select a region:</option>
+                    <option value="Asia">Asia</option>
+                    <option value="North America">North America</option>
+                    <option value="South America">South America</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Others">Others</option>
+                  </select>
+                </div>
+              </div>
 
-        <section class="" id="analyze-dashboard">
-          <div class="row">
-            <article class="concept-article col-sm-6">
-                <h3>Personalized Dashboard</h3>
-                <p>
-                  Our multi-platform dashboard shows you the <i>pulse</i> of your business and allows all of your stake holders to capture and optimize the retail experience anywhere anytime.
-                </p>
-                <p class="call-for-action demo"><span class="demo-call">Request a demo now</span> <a class="btn btn-primary get-demo btn-lg"  href="contact.html">Get In Touch</a></p>
-            </article>
+              <div class="form-group required">
+                  <label for="email" class="col-sm-4 control-label">Email</label>
+                  <div class="col-sm-8">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                  </div>
+              </div>
 
-            <div class="concept-art col-sm-6">
-                <img src="images/dashboard_ipad.png" class="art">
-            </div>
-          </div>
-        </section>
+              <div class="form-group">
+                  <label for="tel" class="col-sm-4 control-label">Phone Number</label>
+                  <div class="col-sm-8">
+                    <input type="tel" class="form-control" id="tel" name="tel" placeholder="">
+                  </div>
+              </div>
 
-        <section class="alt" id="engage">
-          <div class="row">
-            <div class="logo-holder col-md-4">
-              <img src="images/engage_logo_big.png" class="icon-badge">
-            </div>
-            <article class="concept-article col-md-8">
-              <h2>
-                Engage
-              </h2>
-              <p>
-                Close the <i>loop</i> with a contextual engagement. Our dashboard enables you to easily setup automatic and intelligent engagement thru email, In-App and push messaging.
-              </p>
-            </article>
-          </div>
-          <div class="row">
-            <div class="concept-art col-md-4 engage-art">
-                <img src="images/engage_photo.png" class="art" alt="engage">
-            </div>
-            <div class="concept-art col-md-4 plane-art">
-                <img src="images/engage_plane.png" class="art" alt="plane">
-            </div>
-            <div class="concept-art col-md-4 laptop-art">
-                <img src="images/engage_laptop.png" class="art" alt="laptop">
-            </div>
-          </div>
-        </section>
+              <div class="form-group required">
+                <label for="msg" class="col-sm-4 control-label">Message</label>
+                <div class="col-sm-8">
+                  <textarea id="msg" name="msg" class="form-control" rows="6" required></textarea>
+                </div>
+              </div>
 
-        <section class="" id="get-in-touch">
-          <div class="call-for-action"><span class="action-statement">Turn your in-store visitors into loyal customers now.</span> <span class="action-button"><a class="btn btn-primary get-in-touch btn-lg"  href="contact.html">Get In Touch</a></span></div>
-        </section>
+              <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-6">
+                  <button type="submit" class="btn btn-default btn-primary">Submit</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
       </main>
 
 

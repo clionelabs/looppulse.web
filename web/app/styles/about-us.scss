@@ -1,0 +1,47 @@
+
+.about-us.page {
+    font-size: 22px;
+    h3, h4 { color: #7d7d7d;}
+    article { 
+        margin-bottom: 3em;
+    }
+    .people {
+        margin-bottom: 2em;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .people-image, h3, h4 {
+            text-align: center;
+        }
+    }
+    hr {
+        border:0;
+        height:1px;
+        background-color: $headline-color;
+        width: 92%;
+        margin: 0 auto 2em;
+    }
+
+    a.linkedin {
+        background: url(../images/linkedin_circle_gray.png) center no-repeat;
+        background-size: cover;
+        display:inline-block;
+        width: 32px;
+        height:32px;
+        vertical-align: top; //height of the h3 is 34px
+        &:hover {
+            background-image: url(../images/linkedin_circle_color.png);
+        }
+    }
+}
+
+@media (min-width: $screen-sm-min) { 
+    .about-us.page { 
+
+        .people{
+            .people-image, h3, h4 {
+                text-align: left;
+            }
+        }
+    }
+}
