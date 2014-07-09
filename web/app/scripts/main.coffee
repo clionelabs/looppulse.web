@@ -26,6 +26,7 @@ if $(".contact.page").size() > 0
       obj[entry["name"]] = entry["value"]
 
     obj["name"] = obj["firstName"] + " " + obj["lastName"]
+    obj["timestamp"] = (new Date()).getTime()
 
     payload = JSON.stringify(obj)
 
@@ -66,7 +67,7 @@ if $("main.index").size() > 0
   params = parseQueryString(queryString)
   if (params?.contact_form_submit == "SUCCESS")
     notify("Thanks for the message. Our team will get back to you shortly.", "success");
-  
+
   #notify("Welcome", "info");
 
 
